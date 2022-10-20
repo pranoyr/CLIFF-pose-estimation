@@ -14,6 +14,7 @@ from lib.yolov3_dataset import DetectionDataset
 from common.imutils import process_image
 from common.utils import estimate_focal_length
 from common import constants
+import pickle as pk
 
 
 
@@ -73,11 +74,14 @@ class CustomDataset(Dataset):
 	
 	def __getitem__(self, index):  
 		# read images in grayscale, then invert them
-		img  = cv2.imread(self.imgs_data[index])
+		img  = cv2.imread(self.imgs_data[index].replace("smpl_params", "all_images"))[-4]
 		img_h, img_w, _ = img.shape
 		img_rgb = img[:, :, ::-1]
 		# img = self.transform(img)
-
+		
+		# load from pickle file:
+		pose_params = pk.load(open(self.data_dir), 'rb')["pose"]
+		beta_params = pk.load(open(self.data_dir), 'rb')["beta"]
 
 		mediapipe_results = detect_pose(img)# shape (18, 2)
 		scaled_keypoints = mediapipe_results["scaled_keypoints"]
@@ -106,6 +110,8 @@ class CustomDataset(Dataset):
 		data["focal_length"] = focal_length
 		data["img_h"] = img_h
 		data["img_w"] = img_w
+		data["pose_params"] = pose_params
+		data["beta_params"] = beta_params
 
 		data["target_landmarks"] = target_landmarks
 

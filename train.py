@@ -28,13 +28,6 @@ from utils import *
 
 import cv2
 
-from pytorch3d.structures import Meshes
-from pytorch3d.vis.plotly_vis import AxisArgs, plot_batch_individually, plot_scene
-from pytorch3d.vis.texture_vis import texturesuv_image_matplotlib
-from pytorch3d.renderer import (
-	TexturesVertex
-	
-)
 from common.utils import *
 from render import *
 import smplx
@@ -65,7 +58,7 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 		img_h = batch["img_h"].to(device).float()
 		img_w = batch["img_w"].to(device).float()
 		focal_length = batch["focal_length"].to(device).float()
-
+	
 
 		# print("norm_img.shape", norm_img.shape)
 		# print("center.shape", center.shape)
@@ -73,8 +66,6 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 		# print("img_h.shape", img_h.shape)
 		# print("img_w.shape", img_w.shape)
 		# print("focal_length.shape", focal_length.shape)
-
-
 
 
 		cx, cy, b = center[:, 0], center[:, 1], scale * 200
@@ -125,7 +116,6 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 
 
 	
-	
 		mediapipe_left_leg_indices = torch.tensor([24,26,28,32])
 		mediapipe_right_leg_indices = torch.tensor([23,25,27,31])
 		mediapipe_left_arm_indices = torch.tensor([12,14,16,20])
@@ -136,24 +126,20 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 
 
 
-
-		
-		# print(projected_keypoints_2d.shape)
-		# print(batch["target_landmarks"].shape)
-		
-
 		# projected_keypoints_2d = projected_keypoints_2d.view(-1, 2)
 		# batch["target_landmarks"] = batch["target_landmarks"].view(-1, 2)
-
-		
 		# diff = projected_keypoints_2d - batch["target_landmarks"].to(device).float()
 		# # print(diff.shape)
 		# loss = torch.norm(diff, dim=1, p=2).square().sum()/norm_img.shape[0]
-	
-	
-		loss = criterion(projected_keypoints_2d, batch["target_landmarks"].to(device).float())
+		keypoint_loss = criterion(projected_keypoints_2d, batch["target_landmarks"].to(device).float())
+
+		beta_loss = criterion(pred_betas, batch["beta_params"].to(device).float())
+		pose_loss = criterion(pred_rotmat[:, [0]], batch["pose_params"].to(device).float())
 
 
+		loss = keypoint_loss * 5   + \
+		  		beta_loss * 0.001 + \
+		 		pose_loss  
 
 		# landmarks = batch["target_landmarks"].squeeze(0).cpu().numpy() * np.array([img_w, img_h])
 		# # print(landmarks)
@@ -173,8 +159,6 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 
 	
 
-
-
 		# landmarks = projected_keypoints_2d.squeeze(0).detach().cpu().numpy() * np.array([img_w, img_h])
 		# # print(projected_keypoints_2d)
 		
@@ -190,21 +174,6 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 		# img_draw = cv2.resize(img_draw, (480, 640))
 		# cv2.imshow("predicted.png", img_draw)
 		# cv2.waitKey(1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 		# measure accuracy and record loss

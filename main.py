@@ -23,18 +23,13 @@ import torchvision.transforms as transforms
 import torchvision.models as models
 from torch.utils.data import Subset
 from train import train_epoch
-import datasets
+import dataset
 
-from common.utils import strip_prefix_if_present, cam_crop2full, video_to_images
-from common.utils import estimate_focal_length
+
 from common.renderer_pyrd import Renderer
-from lib.yolov3_detector import HumanDetector
 from common.mocap_dataset import MocapDataset
-from lib.yolov3_dataset import DetectionDataset
-from common.imutils import process_image
 from models.cliff_hr48.cliff import CLIFF as cliff_hr48
 from models.cliff_res50.cliff import CLIFF as cliff_res50
-from common.utils import estimate_focal_length
 from common import constants
 
 
@@ -247,11 +242,11 @@ def main_worker(args):
 
 
 	traindir = "/home/pranoy/code/auto-transform/data/imgs"
-	valdir = os.path.join(args.data, 'val')
-	normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
-									std=[0.229, 0.224, 0.225])
+	# valdir = os.path.join(args.data, 'val')
+	# normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+	# 								std=[0.229, 0.224, 0.225])
 
-	train_dataset = datasets.CustomDataset(traindir)
+	train_dataset = dataset.CustomDataset(traindir)
 
 	# val_dataset = datasets.ImageFolder(
 	# 	valdir,
