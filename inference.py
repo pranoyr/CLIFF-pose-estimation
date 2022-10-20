@@ -12,7 +12,6 @@ import math
 import time
 from common.renderer_pyrd import Renderer
 from render import *
-from lib.pytorch_yolo_v3_master.preprocess import letterbox_image
 from pytorch3d.structures import Meshes
 import pickle
 import os.path as osp
@@ -116,20 +115,20 @@ smpl_model = smplx.create(constants.SMPL_MODEL_DIR, "smpl").to(device)
 
 
 while True:
-	# ret, img_bgr = vid.read()
-	img_bgr = cv2.imread("/home/pranoy/code/auto-transform/sample_data/imgs/IMG_1789.JPEG")
+	ret, img_bgr = vid.read()
+	# img_bgr = cv2.imread("/home/pranoy/code/auto-transform/sample_data/imgs/IMG_1789.JPEG")
 	draw_img = img_bgr.copy()
 	# img_bgr = cv2.resize(img_bgr, (512, 512))
 	
 
 
-	norm_img = (letterbox_image(img_bgr, (416, 416)))
-	norm_img = norm_img[:, :, ::-1].transpose((2, 0, 1)).copy()
-	norm_img = norm_img / 255.0
+	# norm_img = (letterbox_image(img_bgr, (416, 416)))
+	# norm_img = norm_img[:, :, ::-1].transpose((2, 0, 1)).copy()
+	# norm_img = norm_img / 255.0
 
-	norm_img = torch.from_numpy(norm_img)
-	norm_img = norm_img.to(device).float()
-	norm_img = norm_img.unsqueeze(0)
+	# norm_img = torch.from_numpy(norm_img)
+	# norm_img = norm_img.to(device).float()
+	# norm_img = norm_img.unsqueeze(0)
 
 	dim = np.array([img_bgr.shape[1], img_bgr.shape[0]])
 	dim = torch.from_numpy(dim)
@@ -203,9 +202,9 @@ while True:
 
 
 
-	# print("betas", pred_betas.shape)
-	# print("body pose", pred_rotmat[:, 1:].shape)
-	# print("global_orient", pred_rotmat[:, [0]].shape)
+	print("betas", pred_betas.shape)
+	print("body pose", pred_rotmat[:, 1:].shape)
+	print("global_orient", pred_rotmat[:, [0]].shape)
 	pred_output = smpl_model(betas=pred_betas,
 								body_pose=pred_rotmat[:, 1:],
 								global_orient=pred_rotmat[:, [0]],
