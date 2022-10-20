@@ -285,7 +285,7 @@ def validate_epoch(cliff_model ,img_bgr):
 	
 	front_view = renderer.render_front_view(vertices.cpu(), img_bgr)
 	front_view = cv2.resize(front_view, (480, 640))
-	cv2.imshow('image', front_view)
+	cv2.imwrite('image.jpg', front_view)
 
 
 
