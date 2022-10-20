@@ -292,33 +292,33 @@ def validate_epoch(cliff_model ,img_bgr):
 	
 
 
-	# poses, _ = detect_pose(draw_img)
-	# print(poses.shape)
+	# # poses, _ = detect_pose(draw_img)
+	# # print(poses.shape)
 
-	smplx_left_leg_indices = torch.tensor([2,5,8,11])
-	smplx_right_leg_indices = torch.tensor([1,4,7,10])
-	smplx_left_arm_indices = torch.tensor([17,19,21,23])
-	smplx_right_arm_indices = torch.tensor([16,18,20,22])
-	nose_neck_indices = torch.tensor([15])
+	# smplx_left_leg_indices = torch.tensor([2,5,8,11])
+	# smplx_right_leg_indices = torch.tensor([1,4,7,10])
+	# smplx_left_arm_indices = torch.tensor([17,19,21,23])
+	# smplx_right_arm_indices = torch.tensor([16,18,20,22])
+	# nose_neck_indices = torch.tensor([15])
 
-	mediapipe_left_leg_indices = torch.tensor([24,26,28,32])
-	mediapipe_right_leg_indices = torch.tensor([23,25,27,31])
-	mediapipe_left_arm_indices = torch.tensor([12,14,16,20])
-	mediapipe_right_arm_indices = torch.tensor([11,13,15,19])
-	mediapipe_nose_neck_indices = torch.tensor([0])
+	# mediapipe_left_leg_indices = torch.tensor([24,26,28,32])
+	# mediapipe_right_leg_indices = torch.tensor([23,25,27,31])
+	# mediapipe_left_arm_indices = torch.tensor([12,14,16,20])
+	# mediapipe_right_arm_indices = torch.tensor([11,13,15,19])
+	# mediapipe_nose_neck_indices = torch.tensor([0])
 
 
-	landmarks  = landmarks[smplx_left_leg_indices]
+	# landmarks  = landmarks[smplx_left_leg_indices]
 
-	for i in range(landmarks.shape[0]):
-		x, y = landmarks[i]
-		#cv2.circle(front_view, (int(x), int(y)), 2, (0, 0, 255), -1)
-		cv2.putText(front_view, str(i), (int(x), int(y)), 0, 0.5, 255)
-		#time.sleep(0.5)
+	# for i in range(landmarks.shape[0]):
+	# 	x, y = landmarks[i]
+	# 	#cv2.circle(front_view, (int(x), int(y)), 2, (0, 0, 255), -1)
+	# 	cv2.putText(front_view, str(i), (int(x), int(y)), 0, 0.5, 255)
+	# 	#time.sleep(0.5)
 
-	# cv2.imshow("predicted.png", front_view)
+	# # cv2.imshow("predicted.png", front_view)
 
-	cv2.waitKey(1)
+	# cv2.waitKey(1)
 	
 
 	# poses= poses[mediapipe_nose_neck_indices]
