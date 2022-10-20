@@ -74,14 +74,18 @@ class CustomDataset(Dataset):
 	
 	def __getitem__(self, index):  
 		# read images in grayscale, then invert them
-		img  = cv2.imread(self.imgs_data[index].replace("smpl_params", "all_images"))[-4]
+		img  = cv2.imread(self.imgs_data[index].replace("smpl_params", "all_images")[:-4])
 		img_h, img_w, _ = img.shape
 		img_rgb = img[:, :, ::-1]
 		# img = self.transform(img)
 		
 		# load from pickle file:
-		pose_params = pk.load(open(self.data_dir), 'rb')["pose"]
-		beta_params = pk.load(open(self.data_dir), 'rb')["beta"]
+		
+		with open(self.imgs_data[index], 'rb') as f:
+			data = pk.load(f)
+			pose_params = data['body_pose']
+			beta_params = data['beta']
+
 
 		mediapipe_results = detect_pose(img)# shape (18, 2)
 		scaled_keypoints = mediapipe_results["scaled_keypoints"]

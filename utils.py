@@ -20,7 +20,7 @@ import torch.nn as nn
 
 
 
-device = torch.device("cuda:0")
+device = torch.device("cuda:1")
 
 
 body_idx = np.squeeze(np.arange(24)) 
@@ -130,7 +130,7 @@ class AverageMeter(object):
         self.avg = self.sum / self.count
 
     def all_reduce(self):
-        device = "cuda:0" if torch.cuda.is_available() else "cpu"
+        device = "cuda:1" if torch.cuda.is_available() else "cpu"
         total = torch.tensor([self.sum, self.count], dtype=torch.float32, device=device)
         dist.all_reduce(total, dist.ReduceOp.SUM, async_op=False)
         self.sum, self.count = total.tolist()

@@ -89,7 +89,7 @@ def extract_bounding_box(points):
 
 
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 
 
 print("--------------------------- Detection ---------------------------")
@@ -124,18 +124,18 @@ def validate_epoch(cliff_model ,img_bgr):
 	
 
 
-	norm_img = (letterbox_image(img_bgr, (416, 416)))
-	norm_img = norm_img[:, :, ::-1].transpose((2, 0, 1)).copy()
-	norm_img = norm_img / 255.0
+	# norm_img = (letterbox_image(img_bgr, (416, 416)))
+	# norm_img = norm_img[:, :, ::-1].transpose((2, 0, 1)).copy()
+	# norm_img = norm_img / 255.0
 
-	norm_img = torch.from_numpy(norm_img)
-	norm_img = norm_img.to(device).float()
-	norm_img = norm_img.unsqueeze(0)
+	# norm_img = torch.from_numpy(norm_img)
+	# norm_img = norm_img.to(device).float()
+	# norm_img = norm_img.unsqueeze(0)
 
-	dim = np.array([img_bgr.shape[1], img_bgr.shape[0]])
-	dim = torch.from_numpy(dim)
-	dim = dim.unsqueeze(0)
-	dim = dim.to(device)
+	# dim = np.array([img_bgr.shape[1], img_bgr.shape[0]])
+	# dim = torch.from_numpy(dim)
+	# dim = dim.unsqueeze(0)
+	# dim = dim.to(device)
 
 
 	mediapipe_results = detect_pose(img_bgr)# shape (18, 2)
@@ -235,9 +235,9 @@ def validate_epoch(cliff_model ,img_bgr):
 
 	
 
-	camera_center = torch.zeros(1, 2, device="cuda:0")
+	camera_center = torch.zeros(1, 2, device="cuda:1")
 	pred_keypoints_2d = perspective_projection(joints,
-				rotation=torch.eye(3, device="cuda:0").unsqueeze(0).expand(1, -1, -1),
+				rotation=torch.eye(3, device="cuda:1").unsqueeze(0).expand(1, -1, -1),
 				translation=pred_cam_full,
 				focal_length=focal_length,
 				camera_center=torch.tensor([torch.div(img_w, 2, rounding_mode='floor'), 

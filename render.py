@@ -22,7 +22,7 @@ import numpy as np
 
 # Setup
 if torch.cuda.is_available():
-    device = torch.device("cuda:0")
+    device = torch.device("cuda:1")
     # torch.cuda.set_device(device)
 else:
     device = torch.device("cpu")

@@ -94,7 +94,7 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 
 
 		projected_keypoints_2d = perspective_projection(pred_joints,
-				rotation=torch.eye(3, device="cuda:0").unsqueeze(0).expand(1, -1, -1),
+				rotation=torch.eye(3, device="cuda:1").unsqueeze(0).expand(1, -1, -1),
 				translation=pred_cam_full,
 				focal_length=focal_length,
 				camera_center=torch.div(full_img_shape.flip(dims=[1]), 2, rounding_mode='floor'))
@@ -134,7 +134,7 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 		keypoint_loss = criterion(projected_keypoints_2d, batch["target_landmarks"].to(device).float())
 
 		beta_loss = criterion(pred_betas, batch["beta_params"].to(device).float())
-		pose_loss = criterion(pred_rotmat[:, [0]], batch["pose_params"].to(device).float())
+		pose_loss = criterion(pred_rotmat[:, 1:], batch["pose_params"].to(device).float())
 
 
 		loss = keypoint_loss * 5   + \

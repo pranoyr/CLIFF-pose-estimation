@@ -139,7 +139,7 @@ def main():
 # def main_worker(gpu, ngpus_per_node, args):
 def main_worker(args):
 	global best_acc1
-	args.gpu = "cuda:0"
+	args.gpu = "cuda:1"
 	th = 100000
 
 
@@ -241,7 +241,7 @@ def main_worker(args):
 	cudnn.benchmark = True
 
 
-	traindir = "/home/pranoy/code/auto-transform/data/imgs"
+	traindir = "/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params"
 	# valdir = os.path.join(args.data, 'val')
 	# normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
 	# 								std=[0.229, 0.224, 0.225])
