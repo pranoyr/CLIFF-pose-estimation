@@ -1,0 +1,10 @@
+*.pt
+*.pth
+/data
+*.mat
+*.jpeg
+*.jpg
+*.png
+*.gif
+*.bmp
+*.MOV
