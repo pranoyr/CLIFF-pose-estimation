@@ -8,9 +8,9 @@ from pose_2D import detect_pose
 from common.utils import strip_prefix_if_present, cam_crop2full, video_to_images
 from common.utils import estimate_focal_length
 from common.renderer_pyrd import Renderer
-from lib.yolov3_detector import HumanDetector
+# from lib.yolov3_detector import HumanDetector
 from common.mocap_dataset import MocapDataset
-from lib.yolov3_dataset import DetectionDataset
+# from lib.yolov3_dataset import DetectionDataset
 from common.imutils import process_image
 from common.utils import estimate_focal_length
 from common import constants

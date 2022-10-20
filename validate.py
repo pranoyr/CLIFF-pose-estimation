@@ -12,7 +12,7 @@ import math
 import time
 from common.renderer_pyrd import Renderer
 from render import *
-from lib.pytorch_yolo_v3_master.preprocess import letterbox_image
+# from lib.pytorch_yolo_v3_master.preprocess import letterbox_image
 from pytorch3d.structures import Meshes
 import os.path as osp
 import cv2
@@ -31,10 +31,10 @@ from models.cliff_res50.cliff import CLIFF as cliff_res50
 from common import constants
 from common.utils import strip_prefix_if_present, cam_crop2full, video_to_images
 from common.utils import estimate_focal_length
-from common.renderer_pyrd import Renderer
-from lib.yolov3_detector import HumanDetector
+# from common.renderer_pyrd import Renderer
+# from lib.yolov3_detector import HumanDetector
 from common.mocap_dataset import MocapDataset
-from lib.yolov3_dataset import DetectionDataset
+# from lib.yolov3_dataset import DetectionDataset
 from common.imutils import process_image
 from common.utils import estimate_focal_length
 
