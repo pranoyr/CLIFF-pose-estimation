@@ -139,7 +139,7 @@ def main():
 # def main_worker(gpu, ngpus_per_node, args):
 def main_worker(args):
 	global best_acc1
-	args.gpu = "cuda:1"
+	args.gpu = "cuda:0"
 	th = 100000
 
 

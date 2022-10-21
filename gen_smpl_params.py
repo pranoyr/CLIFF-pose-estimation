@@ -84,7 +84,7 @@ from pose_2D import detect_pose
 
 
 
-device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 # print("--------------------------- Detection ---------------------------")
@@ -257,9 +257,9 @@ for file_name in tqdm(list_images):
 
 	
 
-	# camera_center = torch.zeros(1, 2, device="cuda:1")
+	# camera_center = torch.zeros(1, 2, device="cuda:0")
 	# pred_keypoints_2d = perspective_projection(joints,
-	# 			rotation=torch.eye(3, device="cuda:1").unsqueeze(0).expand(1, -1, -1),
+	# 			rotation=torch.eye(3, device="cuda:0").unsqueeze(0).expand(1, -1, -1),
 	# 			translation=pred_cam_full,
 	# 			focal_length=focal_length,
 	# 			camera_center=torch.div(full_img_shape, 2, rounding_mode='floor'))
