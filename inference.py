@@ -82,6 +82,7 @@ from pose_2D import detect_pose
 
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+# device = torch.device("cpu")
 
 
 # print("--------------------------- Detection ---------------------------")
@@ -94,8 +95,8 @@ print("--------------------------- 3D HPS estimation ---------------------------
 cliff = eval("cliff_" + "hr48")
 cliff_model = cliff(constants.SMPL_MEAN_PARAMS).to(device)
 # Load the pretrained model
-# state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
-state_dict = torch.load("checkpoint.pth")['state_dict']
+state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
+# state_dict = torch.load("checkpoint.pth", map_location="cuda")['state_dict']
 state_dict = strip_prefix_if_present(state_dict, prefix="module.")
 cliff_model.load_state_dict(state_dict, strict=True)
 cliff_model.eval()
@@ -115,9 +116,9 @@ smpl_model = smplx.create(constants.SMPL_MODEL_DIR, "smpl").to(device)
 
 
 while True:
-	# ret, img_bgr = vid.read()
+	ret, img_bgr = vid.read()
 	# img_bgr = cv2.imread("/home/pranoy/code/auto-transform/sample_data/imgs/IMG_1789.JPEG")
-	img_bgr = cv2.imread("/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/all_images/frame_003809.jpg")
+	# img_bgr = cv2.imread("images/frame_003809.jpg")
 	draw_img = img_bgr.copy()
 	# img_bgr = cv2.resize(img_bgr, (512, 512))
 	
@@ -159,6 +160,7 @@ while True:
 
 	norm_img, center, scale, crop_ul, crop_br, _ = process_image(img_rgb, bbox)
 
+
 	
 	center = center.unsqueeze(0).to(device)
 	scale = scale.unsqueeze(0)
@@ -173,7 +175,7 @@ while True:
 	pred_vert_arr = []
 	cx, cy, b = center[:, 0], center[:, 1], scale * 200
 
-	print(cx, cy, b)
+	# print(cx, cy, b)
 
 	
 	bbox_info = torch.stack([cx - img_w / 2., cy - img_h / 2., b], dim=-1)
@@ -189,7 +191,11 @@ while True:
 	print(bbox_info.shape)
 
 	with torch.no_grad():
-		pred_rotmat, pred_betas, pred_cam_crop = cliff_model(norm_img, bbox_info)
+		start = time.time()
+		pred_rotmat, pred_betas, pred_cam_crop = cliff_model(norm_img, bbox_info,  n_iter=3)
+		end = time.time()
+
+	print("FPS: ", 1 / (end - start))
 
 	
 
@@ -203,9 +209,9 @@ while True:
 
 
 
-	print("betas", pred_betas.shape)
-	print("body pose", pred_rotmat[:, 1:].shape)
-	print("global_orient", pred_rotmat[:, [0]].shape)
+	# print("betas", pred_betas.shape)
+	# print("body pose", pred_rotmat[:, 1:].shape)
+	# print("global_orient", pred_rotmat[:, [0]].shape)
 	pred_output = smpl_model(betas=pred_betas,
 								body_pose=pred_rotmat[:, 1:],
 								global_orient=pred_rotmat[:, [0]],
@@ -294,8 +300,8 @@ while True:
 	front_view = renderer.render_front_view(vertices.cpu(), img_bgr)
 
 	front_view = cv2.resize(front_view, (640, 480))
-	# cv2.imshow('image', front_view)
-	cv2.imwrite("front_view.png", front_view)
+	cv2.imshow('image', front_view)
+	# cv2.imwrite("front_view.png", front_view)
 
 
 
@@ -328,7 +334,7 @@ while True:
 
 	# cv2.imshow("predicted.png", front_view)
 
-	# cv2.waitKey(1)
+	cv2.waitKey(1)
 	
 
 	# # poses= poses[mediapipe_nose_neck_indices]
@@ -343,7 +349,7 @@ while True:
 	# # cv2.imshow("mediapipe", draw_img)
 	# # cv2.waitKey(1)
 
-	# del renderer
+	del renderer
 
 
 

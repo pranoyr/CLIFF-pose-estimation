@@ -139,7 +139,10 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 
 		loss = keypoint_loss * 5   + \
 		  		beta_loss * 0.001 + \
-		 		pose_loss  
+		 		pose_loss   +  \
+				((torch.exp(-pred_cam_crop[:,0]*10)) ** 2 ).mean()
+				
+		loss *= 60
 
 		# landmarks = batch["target_landmarks"].squeeze(0).cpu().numpy() * np.array([img_w, img_h])
 		# # print(landmarks)

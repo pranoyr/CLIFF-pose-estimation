@@ -110,17 +110,16 @@ def extract_bounding_box(points):
 	return torch.tensor([min(x_coordinates), min(y_coordinates), max(x_coordinates), max(y_coordinates)])
 
 
-vid = cv2.VideoCapture(0)
 
 # Setup the SMPL model
 smpl_model = smplx.create(constants.SMPL_MODEL_DIR, "smpl").to(device)
 
 
 
-list_images = os.listdir("/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/all_images/")
+list_images = os.listdir("/media/pranoy/Pranoy/coco/train2017/s")
 
 for file_name in tqdm(list_images):
-	file_name_full = os.path.join("/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/all_images/", file_name)
+	file_name_full = os.path.join("/media/pranoy/Pranoy/coco/train2017/", file_name)
 	# ret, img_bgr = vid.read()
 	img_bgr = cv2.imread(file_name_full)
 	draw_img = img_bgr.copy()
@@ -226,7 +225,7 @@ for file_name in tqdm(list_images):
 	results = {}
 	results["beta"] = pred_betas.cpu().squeeze(0).numpy()
 	results["body_pose"] = pred_rotmat[:, 1:].cpu().squeeze(0).numpy()
-	pickle.dump(results, open("/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/" + file_name + ".pkl", "wb"))
+	pickle.dump(results, open("/media/pranoy/Pranoy/coco/smpl_params/" + file_name + ".pkl", "wb"))
 
 	# vertices = pred_output.vertices
 	# faces = smpl_model.faces
