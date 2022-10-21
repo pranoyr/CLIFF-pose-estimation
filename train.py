@@ -139,10 +139,10 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 
 		loss = keypoint_loss * 5   + \
 		  		beta_loss * 0.001 + \
-		 		pose_loss   +  \
-				((torch.exp(-pred_cam_crop[:,0]*10)) ** 2 ).mean()
+		 		pose_loss   
+				# ((torch.exp(-pred_cam_crop[:,0]*10)) ** 2 ).mean()
 				
-		loss *= 60
+		# loss *= 60
 
 		# landmarks = batch["target_landmarks"].squeeze(0).cpu().numpy() * np.array([img_w, img_h])
 		# # print(landmarks)
@@ -211,7 +211,7 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 			# cv2.waitKey(1)
 
 	model.eval()
-	img = cv2.imread("/home/pranoy/code/auto-transform/data/imgs/IMG_1862.JPEG")
+	img = cv2.imread("/media/pranoy/Pranoy/coco/train2017/000000196085.jpg")
 	validate_epoch(model, img)
 	
 
