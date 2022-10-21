@@ -95,6 +95,3 @@ class CLIFF(nn.Module):
         pred_rotmat = rot6d_to_rotmat(pred_pose).view(batch_size, 24, 3, 3)
 
         return pred_rotmat, pred_shape, pred_cam
-
-
-
