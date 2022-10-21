@@ -27,7 +27,7 @@ class CLIFF(nn.Module):
 
     def __init__(self, smpl_mean_params, img_feat_num=2048):
         super(CLIFF, self).__init__()
-        self.encoder = ResNet(layers=[3, 4, 6, 3])
+        self.encoder = ResNet(layers=[2, 2, 2, 2])
 
         npose = 24 * 6
         nshape = 10
@@ -95,3 +95,6 @@ class CLIFF(nn.Module):
         pred_rotmat = rot6d_to_rotmat(pred_pose).view(batch_size, 24, 3, 3)
 
         return pred_rotmat, pred_shape, pred_cam
+
+
+
