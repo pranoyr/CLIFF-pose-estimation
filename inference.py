@@ -115,8 +115,9 @@ smpl_model = smplx.create(constants.SMPL_MODEL_DIR, "smpl").to(device)
 
 
 while True:
-	ret, img_bgr = vid.read()
+	# ret, img_bgr = vid.read()
 	# img_bgr = cv2.imread("/home/pranoy/code/auto-transform/sample_data/imgs/IMG_1789.JPEG")
+	img_bgr = cv2.imread("/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/all_images/frame_003809.jpg")
 	draw_img = img_bgr.copy()
 	# img_bgr = cv2.resize(img_bgr, (512, 512))
 	
