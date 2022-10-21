@@ -116,7 +116,7 @@ smpl_model = smplx.create(constants.SMPL_MODEL_DIR, "smpl").to(device)
 
 
 
-list_images = os.listdir("/media/pranoy/Pranoy/coco/train2017/s")
+list_images = os.listdir("/media/pranoy/Pranoy/coco/train2017/")
 
 for file_name in tqdm(list_images):
 	file_name_full = os.path.join("/media/pranoy/Pranoy/coco/train2017/", file_name)
