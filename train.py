@@ -211,7 +211,7 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 			# cv2.waitKey(1)
 
 	model.eval()
-	img = cv2.imread("/media/pranoy/Pranoy/coco/train2017/000000196085.jpg")
+	img = cv2.imread("/home/pranoy/code/auto-transform/new_data/all_images/image89.jpg")
 	validate_epoch(model, img)
 	
 

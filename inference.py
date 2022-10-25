@@ -92,11 +92,11 @@ device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 
 print("--------------------------- 3D HPS estimation ---------------------------")
 # Create the model instance
-cliff = eval("cliff_" + "hr48")
+cliff = eval("cliff_" + "res50")
 cliff_model = cliff(constants.SMPL_MEAN_PARAMS).to(device)
 # Load the pretrained model
-state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
-# state_dict = torch.load("checkpoint.pth", map_location="cuda")['state_dict']
+# state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
+state_dict = torch.load("checkpoint.pth", map_location="cuda")['state_dict']
 state_dict = strip_prefix_if_present(state_dict, prefix="module.")
 cliff_model.load_state_dict(state_dict, strict=True)
 cliff_model.eval()
@@ -117,7 +117,7 @@ smpl_model = smplx.create(constants.SMPL_MODEL_DIR, "smpl").to(device)
 
 while True:
 	ret, img_bgr = vid.read()
-	# img_bgr = cv2.imread("/home/pranoy/code/auto-transform/sample_data/imgs/IMG_1789.JPEG")
+	# img_bgr = cv2.imread("images/frame_000344.jpg")
 	# img_bgr = cv2.imread("images/frame_003809.jpg")
 	draw_img = img_bgr.copy()
 	# img_bgr = cv2.resize(img_bgr, (512, 512))

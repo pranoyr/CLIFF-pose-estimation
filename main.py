@@ -156,9 +156,20 @@ def main_worker(args):
 	# 	dist.init_process_group(backend=args.dist_backend, init_method=args.dist_url,
 	# 							world_size=args.world_size, rank=args.rank)
 
+
+	print("--------------------------- 3D HPS estimation ---------------------------")
 	# Create the model instance
-	cliff = eval("cliff_" + "hr48")
-	model = cliff(constants.SMPL_MEAN_PARAMS).to(args.gpu)
+	model = eval("cliff_" + "res50")
+	model = model(constants.SMPL_MEAN_PARAMS).to(args.gpu)
+	# Load the pretrained model
+	# state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
+	# state_dict = torch.load("checkpoint.pth", map_location="cuda")['state_dict']
+	# model.load_state_dict(state_dict, strict=True)
+	model.eval()
+
+	# Create the model instance
+	# cliff = eval("cliff_" + "res50")
+	# model = cliff(constants.SMPL_MEAN_PARAMS).to(args.gpu)
 	# Load the pretrained model
 	# state_dict = torch.load("/home/pranoy/Downloads/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
 	# state_dict = strip_prefix_if_present(state_dict, prefix="module.")
@@ -209,6 +220,7 @@ def main_worker(args):
 	# 							momentum=args.momentum,
 	# 							weight_decay=args.weight_decay)
 	optimizer = torch.optim.Adam(model.parameters(), args.lr)
+
 	#torch.optim.LBFGS(model.parameters(), lr=args.lr, max_iter=1000)
 	
 	"""Sets the learning rate to the initial LR decayed by 10 every 30 epochs"""
@@ -217,32 +229,32 @@ def main_worker(args):
 	
 	# optionally resume from a checkpoint
 	if args.resume:
-		if os.path.isfile(args.resume):
-			print("=> loading checkpoint '{}'".format(args.resume))
-			if args.gpu is None:
-				checkpoint = torch.load(args.resume)
-			else:
-				# Map model to be loaded to specified single gpu.
-				loc = 'cuda:{}'.format(args.gpu)
-				checkpoint = torch.load(args.resume, map_location=loc)
-			args.start_epoch = checkpoint['epoch']
-			best_acc1 = checkpoint['best_acc1']
-			if args.gpu is not None:
-				# best_acc1 may be from a checkpoint from a different GPU
-				best_acc1 = best_acc1.to(args.gpu)
-			model.load_state_dict(checkpoint['state_dict'])
-			optimizer.load_state_dict(checkpoint['optimizer'])
-			scheduler.load_state_dict(checkpoint['scheduler'])
-			print("=> loaded checkpoint '{}' (epoch {})"
-				  .format(args.resume, checkpoint['epoch']))
-		else:
-			print("=> no checkpoint found at '{}'".format(args.resume))
+		# if os.path.isfile(args.resume):
+		# 	print("=> loading checkpoint '{}'".format(args.resume))
+		# 	if args.gpu is None:
+		checkpoint = torch.load(args.resume)
+		# 	else:
+		# 		# Map model to be loaded to specified single gpu.
+		# 		loc = 'cuda:{}'.format(args.gpu)
+		# 		checkpoint = torch.load(args.resume, map_location=loc)
+		# 	args.start_epoch = checkpoint['epoch']
+		# 	best_acc1 = checkpoint['best_acc1']
+		# 	if args.gpu is not None:
+		# 		# best_acc1 may be from a checkpoint from a different GPU
+		# 		best_acc1 = best_acc1.to(args.gpu)
+		model.load_state_dict(checkpoint['state_dict'])
+		optimizer.load_state_dict(checkpoint['optimizer'])
+		scheduler.load_state_dict(checkpoint['scheduler'])
+	# 	print("=> loaded checkpoint '{}' (epoch {})"
+		# 		  .format(args.resume, checkpoint['epoch']))
+		# else:
+		# 	print("=> no checkpoint found at '{}'".format(args.resume))
 
 	cudnn.benchmark = True
 
 
 	# traindir = "/media/pranoy/Pranoy/coco/smpl_params/"
-	traindir = "/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/"
+	traindir = "/home/pranoy/code/auto-transform/new_data/smpl_params/"
 	# valdir = os.path.join(args.data, 'val')
 	# normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
 	# 								std=[0.229, 0.224, 0.225])

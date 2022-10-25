@@ -97,8 +97,8 @@ print("--------------------------- 3D HPS estimation ---------------------------
 cliff = eval("cliff_" + "hr48")
 cliff_model = cliff(constants.SMPL_MEAN_PARAMS).to(device)
 # Load the pretrained model
-# state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
-state_dict = torch.load("checkpoint.pth")['state_dict']
+state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
+# state_dict = torch.load("checkpoint.pth")['state_dict']
 state_dict = strip_prefix_if_present(state_dict, prefix="module.")
 cliff_model.load_state_dict(state_dict, strict=True)
 cliff_model.eval()
@@ -116,10 +116,10 @@ smpl_model = smplx.create(constants.SMPL_MODEL_DIR, "smpl").to(device)
 
 
 
-list_images = os.listdir("/media/pranoy/Pranoy/coco/train2017/")
+list_images = os.listdir("/home/pranoy/code/auto-transform/new_data/all_images/")
 
 for file_name in tqdm(list_images):
-	file_name_full = os.path.join("/media/pranoy/Pranoy/coco/train2017/", file_name)
+	file_name_full = os.path.join("/home/pranoy/code/auto-transform/new_data/all_images/", file_name)
 	# ret, img_bgr = vid.read()
 	img_bgr = cv2.imread(file_name_full)
 	draw_img = img_bgr.copy()
@@ -225,7 +225,7 @@ for file_name in tqdm(list_images):
 	results = {}
 	results["beta"] = pred_betas.cpu().squeeze(0).numpy()
 	results["body_pose"] = pred_rotmat[:, 1:].cpu().squeeze(0).numpy()
-	pickle.dump(results, open("/media/pranoy/Pranoy/coco/smpl_params/" + file_name + ".pkl", "wb"))
+	pickle.dump(results, open("/home/pranoy/code/auto-transform/new_data/smpl_params/" + file_name + ".pkl", "wb"))
 
 	# vertices = pred_output.vertices
 	# faces = smpl_model.faces
