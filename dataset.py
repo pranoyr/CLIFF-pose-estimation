@@ -138,7 +138,6 @@ class CustomDataset(Dataset):
 
 		return data
 
-
 	def __len__(self):
 		return len(self.imgs_data)
 	
