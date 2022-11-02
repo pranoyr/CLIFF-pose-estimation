@@ -8,3 +8,4 @@
 *.gif
 *.bmp
 *.MOV
+/wandb
