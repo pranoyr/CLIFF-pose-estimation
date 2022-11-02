@@ -1,5 +1,4 @@
 import argparse
-from logging import root
 import os
 import random
 import shutil
@@ -273,8 +272,7 @@ def main_worker(args):
 	# traindir = "/media/pranoy/Pranoy/coco/smpl_params/"
 	# traindir = "/home/pranoy/code/auto-transform/new_data/smpl_params/"
 	# traindir = "/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params"
-	root_dir = "/media/pranoy/Pranoy/human3.6M/"
-	train_list = "z.txt"
+	train_list = "trainlist.txt"
 	# valdir = os.path.join(args.data, 'val')
 	# normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
 	# 								std=[0.229, 0.224, 0.225])
@@ -286,7 +284,7 @@ def main_worker(args):
 
 	# print(test_list)
 
-	train_dataset = dataset.CustomDataset(root_dir, train_list, image_set="train")
+	train_dataset = dataset.CustomDataset(train_list, image_set="train")
 	# val_dataset = dataset.CustomDataset(train_list, image_set="val")
 
 	# val_dataset = datasets.ImageFolder(
