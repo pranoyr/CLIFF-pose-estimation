@@ -1,0 +1,1235 @@
+--------------------------- 3D HPS estimation ---------------------------
+['/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000154.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003627.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003087.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001583.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004571.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005801.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003135.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001428.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003363.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000873.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002494.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003624.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003332.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003695.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002202.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000807.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004653.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000263.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002861.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001104.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005230.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001588.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004451.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003901.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000685.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004305.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001561.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001299.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000960.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001025.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000169.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001216.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005328.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000850.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001620.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003620.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003566.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001446.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006134.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001097.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002886.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003247.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005213.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003235.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004113.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002233.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004436.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002046.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000677.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005496.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004263.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006059.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004177.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004329.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004210.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003320.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001000.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002957.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000417.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000895.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005860.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003997.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004129.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000841.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001235.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002285.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006050.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003839.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003675.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000859.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006185.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002068.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001308.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000615.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003794.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001606.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005235.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004631.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003050.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003054.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003912.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004007.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003832.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004898.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000205.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001184.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002238.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003493.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002155.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002683.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002213.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002054.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003255.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005212.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004080.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000674.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005335.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002169.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001267.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003667.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002069.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005470.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001468.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005309.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003117.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004724.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003810.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003691.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001164.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003843.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002335.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001675.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004289.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001431.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003716.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003526.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004600.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003746.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001203.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000332.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002655.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003115.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001683.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004308.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000343.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002501.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000036.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003060.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004017.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002296.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003881.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003685.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004825.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002831.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004457.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000374.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004287.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004172.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005513.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000623.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000278.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003397.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006075.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002992.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000633.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000032.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004646.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004780.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004516.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003737.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001018.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001904.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004488.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001060.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000676.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006178.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000800.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000663.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004602.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003284.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003128.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004297.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003579.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001635.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003517.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002041.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004082.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002036.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003530.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002842.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002001.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005448.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003892.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002594.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002163.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003399.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003094.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001036.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005961.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005301.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000011.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002325.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002350.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004074.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006080.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003016.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004889.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004828.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004879.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000900.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000235.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003431.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001038.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004695.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001842.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001866.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002906.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001861.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001644.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002949.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004318.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003960.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002055.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002820.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000501.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000809.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004575.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002940.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002694.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003321.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005514.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004348.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000423.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001084.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006125.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000321.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004570.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002515.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001994.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005930.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003916.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001563.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000851.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004562.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001004.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003059.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002539.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002982.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001065.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000087.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004087.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003725.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001875.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006213.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004920.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005250.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005312.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000370.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004789.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002013.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003907.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005848.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004745.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000496.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000471.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001266.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000977.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001199.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004317.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004486.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000464.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002895.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002956.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004336.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000656.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002543.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004091.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004197.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003813.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003991.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003700.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003724.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005968.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006086.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003046.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003074.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000994.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000259.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003723.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000174.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000109.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005500.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000366.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003790.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000289.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003215.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001692.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002744.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005853.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001956.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004302.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002492.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006046.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003944.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002852.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005471.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006164.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003090.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001868.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001183.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003699.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003469.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000912.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006096.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003264.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004366.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001240.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004470.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005401.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005482.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005809.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002432.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005442.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003233.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004291.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004331.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004618.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004510.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004413.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002037.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003489.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002929.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006225.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005795.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003796.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003234.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000743.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000088.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002890.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004157.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000201.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003149.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001221.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002645.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001667.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000756.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005421.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000929.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003595.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002811.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003287.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002236.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004711.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001678.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000013.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004002.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001860.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000644.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006153.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004233.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003348.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003005.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003179.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004763.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003647.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004313.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001055.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004085.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004769.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005297.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001048.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000286.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001049.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001944.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003599.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002057.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005495.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000646.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004852.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005459.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003030.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003814.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004479.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002986.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002295.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002448.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005333.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001573.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000395.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005816.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003548.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003762.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000983.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001190.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002533.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000416.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004420.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000151.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001682.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001408.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004817.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000277.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003665.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000211.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002526.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003231.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001925.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005466.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005761.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005304.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001170.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000115.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001132.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002901.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004196.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001913.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004843.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001083.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001059.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005290.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002984.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005300.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002520.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000172.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004322.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000030.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002656.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002995.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003339.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005225.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003335.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002261.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000329.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003097.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004130.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002334.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004248.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000490.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001679.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003478.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005781.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000388.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004870.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003779.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000684.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004552.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005825.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004020.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002690.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000835.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004498.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002733.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002876.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003077.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004471.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003673.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000223.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005434.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001016.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002953.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002228.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000948.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001603.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002065.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003401.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001857.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001409.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003189.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000744.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004831.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003387.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004092.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002996.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000250.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004476.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003071.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002989.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001993.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003657.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003570.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005426.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006098.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003922.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_006048.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002757.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004128.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005793.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000207.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003946.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000949.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003333.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005189.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001237.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000092.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004511.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002809.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003854.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002566.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003359.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004407.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005229.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002051.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000448.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005295.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002017.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002313.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003036.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003975.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001939.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000506.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002224.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_005858.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_004102.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001247.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_003390.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_001674.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_002129.jpg.pkl'
+ '/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params/frame_000434.jpg.pkl']
+train_list 4473
+test_list 498
+Epoch: [0][  1/140]	Time 14.111 (14.111)	Data  0.000 ( 0.000)	Loss 3.4209 (3.4209)
+Epoch: [0][ 11/140]	Time 10.285 (11.664)	Data  0.000 ( 0.000)	Loss 2.6343 (2.6805)
+Epoch: [0][ 21/140]	Time 10.740 (11.013)	Data  0.000 ( 0.000)	Loss 2.1181 (2.5258)
+Epoch: [0][ 31/140]	Time 10.258 (10.750)	Data  0.000 ( 0.000)	Loss 1.5977 (2.3369)
+Epoch: [0][ 41/140]	Time 10.157 (10.606)	Data  0.000 ( 0.000)	Loss 1.7096 (2.2030)
+Epoch: [0][ 51/140]	Time 10.165 (10.536)	Data  0.000 ( 0.000)	Loss 1.5722 (2.0920)
+Epoch: [0][ 61/140]	Time 10.446 (10.503)	Data  0.000 ( 0.000)	Loss 1.6289 (2.0226)
+Epoch: [0][ 71/140]	Time 10.133 (10.459)	Data  0.000 ( 0.000)	Loss 1.2907 (1.9464)
+Epoch: [0][ 81/140]	Time 10.373 (10.445)	Data  0.000 ( 0.000)	Loss 1.6313 (1.8751)
+Epoch: [0][ 91/140]	Time 10.256 (10.418)	Data  0.000 ( 0.000)	Loss 0.9218 (1.8051)
+Epoch: [0][101/140]	Time 10.042 (10.384)	Data  0.000 ( 0.000)	Loss 1.3064 (1.7428)
+Epoch: [0][111/140]	Time  9.916 (10.344)	Data  0.000 ( 0.000)	Loss 1.0920 (1.6905)
+Epoch: [0][121/140]	Time  9.901 (10.305)	Data  0.000 ( 0.000)	Loss 1.0513 (1.6394)
+Epoch: [0][131/140]	Time  9.974 (10.277)	Data  0.000 ( 0.000)	Loss 1.0119 (1.5903)
+epoch: 0 train_loss: 1.555 val_loss: 1.025
+Epoch: [1][  1/140]	Time 10.902 (10.902)	Data  0.000 ( 0.000)	Loss 0.7881 (0.7881)
+Epoch: [1][ 11/140]	Time 10.442 (10.543)	Data  0.000 ( 0.000)	Loss 0.8969 (0.9764)
+Epoch: [1][ 21/140]	Time 10.593 (10.504)	Data  0.000 ( 0.000)	Loss 0.7768 (0.9155)
+Epoch: [1][ 31/140]	Time 10.449 (10.472)	Data  0.000 ( 0.000)	Loss 0.8121 (0.8901)
+Epoch: [1][ 41/140]	Time 10.247 (10.454)	Data  0.000 ( 0.000)	Loss 0.8030 (0.8751)
+Epoch: [1][ 51/140]	Time 10.104 (10.416)	Data  0.000 ( 0.000)	Loss 0.7425 (0.8606)
+Epoch: [1][ 61/140]	Time 10.134 (10.389)	Data  0.000 ( 0.000)	Loss 0.7583 (0.8530)
+Epoch: [1][ 71/140]	Time 10.092 (10.369)	Data  0.000 ( 0.000)	Loss 0.8102 (0.8493)
+Epoch: [1][ 81/140]	Time 10.313 (10.358)	Data  0.000 ( 0.000)	Loss 0.7468 (0.8382)
+Epoch: [1][ 91/140]	Time 10.034 (10.343)	Data  0.000 ( 0.000)	Loss 0.6258 (0.8371)
+Epoch: [1][101/140]	Time 10.316 (10.325)	Data  0.000 ( 0.000)	Loss 0.5724 (0.8296)
+Epoch: [1][111/140]	Time 10.095 (10.306)	Data  0.000 ( 0.000)	Loss 0.6107 (0.8217)
+Epoch: [1][121/140]	Time 10.003 (10.286)	Data  0.000 ( 0.000)	Loss 0.8058 (0.8217)
+Epoch: [1][131/140]	Time 10.089 (10.271)	Data  0.000 ( 0.000)	Loss 1.2120 (0.8209)
+epoch: 1 train_loss: 0.816 val_loss: 0.748
+Epoch: [2][  1/140]	Time 10.835 (10.835)	Data  0.000 ( 0.000)	Loss 0.5697 (0.5697)
+Epoch: [2][ 11/140]	Time 10.369 (10.499)	Data  0.000 ( 0.000)	Loss 0.6883 (0.6539)
+Epoch: [2][ 21/140]	Time 10.218 (10.375)	Data  0.000 ( 0.000)	Loss 0.5709 (0.6492)
+Epoch: [2][ 31/140]	Time 10.232 (10.326)	Data  0.000 ( 0.000)	Loss 0.5675 (0.6660)
+Epoch: [2][ 41/140]	Time 10.283 (10.303)	Data  0.000 ( 0.000)	Loss 0.6270 (0.6594)
+Epoch: [2][ 51/140]	Time 10.163 (10.279)	Data  0.000 ( 0.000)	Loss 0.5607 (0.6531)
+Epoch: [2][ 61/140]	Time 10.123 (10.261)	Data  0.000 ( 0.000)	Loss 0.6054 (0.6528)
+Epoch: [2][ 71/140]	Time 10.294 (10.251)	Data  0.000 ( 0.000)	Loss 0.5731 (0.6408)
+Epoch: [2][ 81/140]	Time 10.227 (10.248)	Data  0.000 ( 0.000)	Loss 0.4910 (0.6352)
+Epoch: [2][ 91/140]	Time 10.106 (10.234)	Data  0.000 ( 0.000)	Loss 0.7457 (0.6343)
+Epoch: [2][101/140]	Time 10.072 (10.224)	Data  0.000 ( 0.000)	Loss 0.5393 (0.6252)
+Epoch: [2][111/140]	Time 10.194 (10.212)	Data  0.000 ( 0.000)	Loss 0.5425 (0.6178)
+Epoch: [2][121/140]	Time 10.303 (10.202)	Data  0.000 ( 0.000)	Loss 0.5224 (0.6140)
+Epoch: [2][131/140]	Time 10.101 (10.190)	Data  0.000 ( 0.000)	Loss 0.5782 (0.6077)
+epoch: 2 train_loss: 0.606 val_loss: 0.739
+Epoch: [3][  1/140]	Time  9.053 ( 9.053)	Data  0.000 ( 0.000)	Loss 0.4301 (0.4301)
+Epoch: [3][ 11/140]	Time  9.406 ( 9.276)	Data  0.000 ( 0.000)	Loss 0.4527 (0.4867)
+Epoch: [3][ 21/140]	Time  9.886 ( 9.533)	Data  0.000 ( 0.000)	Loss 0.5991 (0.5048)
+Epoch: [3][ 31/140]	Time 10.159 ( 9.566)	Data  0.000 ( 0.000)	Loss 0.5666 (0.5057)
+Epoch: [3][ 41/140]	Time  9.741 ( 9.637)	Data  0.000 ( 0.000)	Loss 0.5582 (0.5087)
+Epoch: [3][ 51/140]	Time  9.978 ( 9.675)	Data  0.000 ( 0.000)	Loss 0.5152 (0.5140)
+Epoch: [3][ 61/140]	Time 10.064 ( 9.711)	Data  0.000 ( 0.000)	Loss 0.4354 (0.5025)
+Epoch: [3][ 71/140]	Time  9.138 ( 9.712)	Data  0.000 ( 0.000)	Loss 0.6053 (0.4996)
+Epoch: [3][ 81/140]	Time  9.583 ( 9.698)	Data  0.000 ( 0.000)	Loss 0.4484 (0.4935)
+Epoch: [3][ 91/140]	Time  9.835 ( 9.723)	Data  0.000 ( 0.000)	Loss 0.6001 (0.4912)
+Epoch: [3][101/140]	Time  9.760 ( 9.751)	Data  0.000 ( 0.000)	Loss 0.4444 (0.4923)
+Epoch: [3][111/140]	Time  9.656 ( 9.763)	Data  0.000 ( 0.000)	Loss 0.4838 (0.4939)
+Epoch: [3][121/140]	Time 10.296 ( 9.796)	Data  0.000 ( 0.000)	Loss 0.4584 (0.4921)
+Epoch: [3][131/140]	Time  9.272 ( 9.805)	Data  0.000 ( 0.000)	Loss 0.4788 (0.4910)
+epoch: 3 train_loss: 0.493 val_loss: 0.478
+Epoch: [4][  1/140]	Time 11.243 (11.243)	Data  0.000 ( 0.000)	Loss 0.4767 (0.4767)
+Epoch: [4][ 11/140]	Time  9.717 (11.107)	Data  0.000 ( 0.000)	Loss 0.5148 (0.4244)
+Epoch: [4][ 21/140]	Time  9.594 (10.415)	Data  0.000 ( 0.000)	Loss 0.3533 (0.4194)
+Epoch: [4][ 31/140]	Time 11.573 (10.257)	Data  0.000 ( 0.000)	Loss 0.3994 (0.4245)
+Epoch: [4][ 41/140]	Time  9.733 (10.490)	Data  0.000 ( 0.000)	Loss 0.3997 (0.4286)
+Epoch: [4][ 51/140]	Time  9.356 (10.320)	Data  0.000 ( 0.000)	Loss 0.4265 (0.4279)
+Epoch: [4][ 61/140]	Time 11.471 (10.442)	Data  0.000 ( 0.000)	Loss 0.3724 (0.4320)
+Epoch: [4][ 71/140]	Time  9.578 (10.349)	Data  0.000 ( 0.000)	Loss 0.3956 (0.4354)
+Epoch: [4][ 81/140]	Time  9.647 (10.269)	Data  0.000 ( 0.000)	Loss 0.3284 (0.4391)
+Epoch: [4][ 91/140]	Time 11.428 (10.324)	Data  0.000 ( 0.000)	Loss 0.4155 (0.4386)
+Epoch: [4][101/140]	Time  9.923 (10.322)	Data  0.000 ( 0.000)	Loss 0.3746 (0.4385)
+Epoch: [4][111/140]	Time  9.568 (10.263)	Data  0.000 ( 0.000)	Loss 0.2428 (0.4346)
+Epoch: [4][121/140]	Time 10.485 (10.232)	Data  0.000 ( 0.000)	Loss 0.4478 (0.4291)
+Epoch: [4][131/140]	Time  9.710 (10.289)	Data  0.000 ( 0.000)	Loss 0.4713 (0.4268)
+epoch: 4 train_loss: 0.423 val_loss: 0.419
+Epoch: [5][  1/140]	Time 10.005 (10.005)	Data  0.000 ( 0.000)	Loss 0.3497 (0.3497)
+Epoch: [5][ 11/140]	Time  9.865 ( 9.736)	Data  0.000 ( 0.000)	Loss 0.4255 (0.3778)
+Epoch: [5][ 21/140]	Time  9.635 ( 9.800)	Data  0.000 ( 0.000)	Loss 0.3911 (0.4061)
+Epoch: [5][ 31/140]	Time  9.007 ( 9.759)	Data  0.000 ( 0.000)	Loss 0.3680 (0.4048)
+Epoch: [5][ 41/140]	Time 10.135 ( 9.774)	Data  0.000 ( 0.000)	Loss 0.3417 (0.3889)
+Epoch: [5][ 51/140]	Time  9.952 ( 9.813)	Data  0.000 ( 0.000)	Loss 0.4448 (0.3856)
+Epoch: [5][ 61/140]	Time  9.850 ( 9.832)	Data  0.000 ( 0.000)	Loss 0.3406 (0.3809)
+Epoch: [5][ 71/140]	Time  9.564 ( 9.844)	Data  0.000 ( 0.000)	Loss 0.4405 (0.3779)
+Epoch: [5][ 81/140]	Time  9.759 ( 9.825)	Data  0.000 ( 0.000)	Loss 0.5085 (0.3792)
+Epoch: [5][ 91/140]	Time 10.030 ( 9.838)	Data  0.000 ( 0.000)	Loss 0.4769 (0.3811)
+Epoch: [5][101/140]	Time  9.675 ( 9.845)	Data  0.000 ( 0.000)	Loss 0.3072 (0.3792)
+Epoch: [5][111/140]	Time 10.000 ( 9.854)	Data  0.000 ( 0.000)	Loss 0.3070 (0.3757)
+Epoch: [5][121/140]	Time  9.563 ( 9.828)	Data  0.000 ( 0.000)	Loss 0.3032 (0.3770)
+Epoch: [5][131/140]	Time 10.786 ( 9.844)	Data  0.000 ( 0.000)	Loss 0.2813 (0.3734)
+epoch: 5 train_loss: 0.373 val_loss: 0.361
+Epoch: [6][  1/140]	Time  9.570 ( 9.570)	Data  0.000 ( 0.000)	Loss 0.3290 (0.3290)
+Epoch: [6][ 11/140]	Time  9.352 ( 9.333)	Data  0.000 ( 0.000)	Loss 0.4151 (0.3776)
+Epoch: [6][ 21/140]	Time  9.235 ( 9.409)	Data  0.000 ( 0.000)	Loss 0.2466 (0.3639)
+Epoch: [6][ 31/140]	Time  9.259 ( 9.443)	Data  0.000 ( 0.000)	Loss 0.3001 (0.3601)
+Epoch: [6][ 41/140]	Time  9.771 ( 9.446)	Data  0.000 ( 0.000)	Loss 0.3201 (0.3473)
+Epoch: [6][ 51/140]	Time  9.203 ( 9.439)	Data  0.000 ( 0.000)	Loss 0.2652 (0.3423)
+Epoch: [6][ 61/140]	Time  9.425 ( 9.420)	Data  0.000 ( 0.000)	Loss 0.2619 (0.3364)
+Epoch: [6][ 71/140]	Time  9.438 ( 9.428)	Data  0.000 ( 0.000)	Loss 0.3514 (0.3400)
+Epoch: [6][ 81/140]	Time  9.774 ( 9.470)	Data  0.000 ( 0.000)	Loss 0.2395 (0.3361)
+Epoch: [6][ 91/140]	Time  9.411 ( 9.468)	Data  0.000 ( 0.000)	Loss 0.3365 (0.3312)
+Epoch: [6][101/140]	Time  9.646 ( 9.486)	Data  0.000 ( 0.000)	Loss 0.3240 (0.3288)
+Epoch: [6][111/140]	Time  9.289 ( 9.492)	Data  0.000 ( 0.000)	Loss 0.2863 (0.3305)
+Epoch: [6][121/140]	Time  9.616 ( 9.489)	Data  0.000 ( 0.000)	Loss 0.3379 (0.3299)
+Epoch: [6][131/140]	Time  9.265 ( 9.478)	Data  0.000 ( 0.000)	Loss 0.2656 (0.3301)
+epoch: 6 train_loss: 0.329 val_loss: 0.308
+Epoch: [7][  1/140]	Time  9.030 ( 9.030)	Data  0.000 ( 0.000)	Loss 0.2803 (0.2803)
+Epoch: [7][ 11/140]	Time  8.879 ( 8.952)	Data  0.000 ( 0.000)	Loss 0.2790 (0.3306)
+Epoch: [7][ 21/140]	Time  8.919 ( 8.953)	Data  0.000 ( 0.000)	Loss 0.3128 (0.3452)
+Epoch: [7][ 31/140]	Time  9.047 ( 8.964)	Data  0.000 ( 0.000)	Loss 0.3133 (0.3503)
+Epoch: [7][ 41/140]	Time  9.070 ( 8.968)	Data  0.000 ( 0.000)	Loss 0.2367 (0.3338)
+Epoch: [7][ 51/140]	Time  8.925 ( 8.967)	Data  0.000 ( 0.000)	Loss 0.2674 (0.3328)
+Epoch: [7][ 61/140]	Time  8.974 ( 8.967)	Data  0.000 ( 0.000)	Loss 0.2851 (0.3282)
+Epoch: [7][ 71/140]	Time  8.980 ( 8.967)	Data  0.000 ( 0.000)	Loss 0.3496 (0.3295)
+Epoch: [7][ 81/140]	Time  9.063 ( 8.966)	Data  0.000 ( 0.000)	Loss 0.2534 (0.3262)
+Epoch: [7][ 91/140]	Time  8.818 ( 8.967)	Data  0.000 ( 0.000)	Loss 0.2264 (0.3216)
+Epoch: [7][101/140]	Time  8.988 ( 8.968)	Data  0.000 ( 0.000)	Loss 0.4763 (0.3221)
+Epoch: [7][111/140]	Time  9.039 ( 8.970)	Data  0.000 ( 0.000)	Loss 0.2942 (0.3221)
+Epoch: [7][121/140]	Time  9.037 ( 8.970)	Data  0.000 ( 0.000)	Loss 0.2667 (0.3201)
+Epoch: [7][131/140]	Time  8.957 ( 8.975)	Data  0.000 ( 0.000)	Loss 0.3050 (0.3181)
+epoch: 7 train_loss: 0.316 val_loss: 0.386
+Epoch: [8][  1/140]	Time  9.188 ( 9.188)	Data  0.000 ( 0.000)	Loss 0.2743 (0.2743)
+Epoch: [8][ 11/140]	Time  9.067 ( 9.082)	Data  0.000 ( 0.000)	Loss 0.2873 (0.2608)
+Epoch: [8][ 21/140]	Time  9.023 ( 9.053)	Data  0.000 ( 0.000)	Loss 0.2402 (0.2616)
+Epoch: [8][ 31/140]	Time  8.977 ( 9.039)	Data  0.000 ( 0.000)	Loss 0.3346 (0.2710)
+Epoch: [8][ 41/140]	Time  8.990 ( 9.031)	Data  0.000 ( 0.000)	Loss 0.2892 (0.2743)
+Epoch: [8][ 51/140]	Time  8.998 ( 9.022)	Data  0.000 ( 0.000)	Loss 0.3660 (0.2785)
+Epoch: [8][ 61/140]	Time  9.019 ( 9.018)	Data  0.000 ( 0.000)	Loss 0.3643 (0.2797)
+Epoch: [8][ 71/140]	Time  9.028 ( 9.020)	Data  0.000 ( 0.000)	Loss 0.3573 (0.2793)
+Epoch: [8][ 81/140]	Time  9.248 ( 9.035)	Data  0.000 ( 0.000)	Loss 0.2494 (0.2770)
+Epoch: [8][ 91/140]	Time  9.125 ( 9.046)	Data  0.000 ( 0.000)	Loss 0.2780 (0.2803)
+Epoch: [8][101/140]	Time  9.137 ( 9.064)	Data  0.000 ( 0.000)	Loss 0.2689 (0.2807)
+Epoch: [8][111/140]	Time  9.293 ( 9.087)	Data  0.000 ( 0.000)	Loss 0.3044 (0.2880)
+Epoch: [8][121/140]	Time  9.214 ( 9.106)	Data  0.000 ( 0.000)	Loss 0.4764 (0.2903)
+Epoch: [8][131/140]	Time  9.287 ( 9.120)	Data  0.000 ( 0.000)	Loss 0.3626 (0.2903)
+epoch: 8 train_loss: 0.290 val_loss: 0.289
+Epoch: [9][  1/140]	Time  9.270 ( 9.270)	Data  0.000 ( 0.000)	Loss 0.2408 (0.2408)
+Epoch: [9][ 11/140]	Time  9.161 ( 9.164)	Data  0.000 ( 0.000)	Loss 0.2662 (0.2673)
+Epoch: [9][ 21/140]	Time  9.082 ( 9.131)	Data  0.000 ( 0.000)	Loss 0.2082 (0.2638)
+Epoch: [9][ 31/140]	Time  9.082 ( 9.106)	Data  0.000 ( 0.000)	Loss 0.2859 (0.2679)
+Epoch: [9][ 41/140]	Time  8.992 ( 9.092)	Data  0.000 ( 0.000)	Loss 0.3048 (0.2774)
+Epoch: [9][ 51/140]	Time  9.045 ( 9.081)	Data  0.000 ( 0.000)	Loss 0.2856 (0.2733)
+Epoch: [9][ 61/140]	Time  9.150 ( 9.076)	Data  0.000 ( 0.000)	Loss 0.2060 (0.2756)
+Epoch: [9][ 71/140]	Time  9.100 ( 9.069)	Data  0.000 ( 0.000)	Loss 0.2278 (0.2741)
+Epoch: [9][ 81/140]	Time  8.937 ( 9.064)	Data  0.000 ( 0.000)	Loss 0.2420 (0.2716)
+Epoch: [9][ 91/140]	Time  9.034 ( 9.059)	Data  0.000 ( 0.000)	Loss 0.2255 (0.2680)
+Epoch: [9][101/140]	Time  9.033 ( 9.054)	Data  0.000 ( 0.000)	Loss 0.2500 (0.2677)
+Epoch: [9][111/140]	Time  9.052 ( 9.051)	Data  0.000 ( 0.000)	Loss 0.2026 (0.2660)
+Epoch: [9][121/140]	Time  8.928 ( 9.044)	Data  0.000 ( 0.000)	Loss 0.2886 (0.2640)
+Epoch: [9][131/140]	Time  9.039 ( 9.039)	Data  0.000 ( 0.000)	Loss 0.3522 (0.2646)
+epoch: 9 train_loss: 0.266 val_loss: 0.340
+Epoch: [10][  1/140]	Time  9.203 ( 9.203)	Data  0.000 ( 0.000)	Loss 0.2138 (0.2138)
+Epoch: [10][ 11/140]	Time  9.050 ( 9.040)	Data  0.000 ( 0.000)	Loss 0.3068 (0.2597)
+Epoch: [10][ 21/140]	Time  8.944 ( 9.010)	Data  0.000 ( 0.000)	Loss 0.2912 (0.2690)
+Epoch: [10][ 31/140]	Time  9.034 ( 9.017)	Data  0.000 ( 0.000)	Loss 0.2069 (0.2674)
+Epoch: [10][ 41/140]	Time  8.976 ( 9.009)	Data  0.000 ( 0.000)	Loss 0.2720 (0.2676)
+Epoch: [10][ 51/140]	Time  8.944 ( 9.000)	Data  0.000 ( 0.000)	Loss 0.2357 (0.2643)
+Epoch: [10][ 61/140]	Time  8.966 ( 8.992)	Data  0.000 ( 0.000)	Loss 0.3936 (0.2662)
+Epoch: [10][ 71/140]	Time  8.948 ( 8.986)	Data  0.000 ( 0.000)	Loss 0.2245 (0.2614)
+Epoch: [10][ 81/140]	Time  8.939 ( 8.978)	Data  0.000 ( 0.000)	Loss 0.3028 (0.2617)
+Epoch: [10][ 91/140]	Time  8.996 ( 8.973)	Data  0.000 ( 0.000)	Loss 0.2899 (0.2608)
+Epoch: [10][101/140]	Time  8.904 ( 8.967)	Data  0.000 ( 0.000)	Loss 0.3192 (0.2632)
+Epoch: [10][111/140]	Time  8.977 ( 8.967)	Data  0.000 ( 0.000)	Loss 0.2855 (0.2645)
+Epoch: [10][121/140]	Time  8.855 ( 8.968)	Data  0.000 ( 0.000)	Loss 0.3653 (0.2676)
+Epoch: [10][131/140]	Time  9.052 ( 8.969)	Data  0.000 ( 0.000)	Loss 0.2555 (0.2683)
+epoch: 10 train_loss: 0.268 val_loss: 0.296
+Epoch: [11][  1/140]	Time  9.046 ( 9.046)	Data  0.000 ( 0.000)	Loss 0.2973 (0.2973)
+Epoch: [11][ 11/140]	Time  8.917 ( 8.955)	Data  0.000 ( 0.000)	Loss 0.2027 (0.2320)
+Epoch: [11][ 21/140]	Time  9.020 ( 8.951)	Data  0.000 ( 0.000)	Loss 0.2707 (0.2347)
+Epoch: [11][ 31/140]	Time  8.937 ( 8.952)	Data  0.000 ( 0.000)	Loss 0.2004 (0.2342)
+Epoch: [11][ 41/140]	Time  9.023 ( 8.956)	Data  0.000 ( 0.000)	Loss 0.2638 (0.2323)
+Epoch: [11][ 51/140]	Time  8.964 ( 8.956)	Data  0.000 ( 0.000)	Loss 0.2589 (0.2355)
+Epoch: [11][ 61/140]	Time  8.985 ( 8.956)	Data  0.000 ( 0.000)	Loss 0.2348 (0.2352)
+Epoch: [11][ 71/140]	Time  8.963 ( 8.961)	Data  0.000 ( 0.000)	Loss 0.2164 (0.2345)
+Epoch: [11][ 81/140]	Time  9.027 ( 8.964)	Data  0.000 ( 0.000)	Loss 0.2878 (0.2362)
+Epoch: [11][ 91/140]	Time  9.009 ( 8.966)	Data  0.000 ( 0.000)	Loss 0.2593 (0.2381)
+Epoch: [11][101/140]	Time  9.000 ( 8.974)	Data  0.000 ( 0.000)	Loss 0.1767 (0.2379)
+Epoch: [11][111/140]	Time  9.029 ( 8.980)	Data  0.000 ( 0.000)	Loss 0.4882 (0.2394)
+Epoch: [11][121/140]	Time  8.983 ( 8.983)	Data  0.000 ( 0.000)	Loss 0.2334 (0.2392)
+Epoch: [11][131/140]	Time  8.954 ( 8.987)	Data  0.000 ( 0.000)	Loss 0.5172 (0.2446)
+epoch: 11 train_loss: 0.245 val_loss: 0.329
+Epoch: [12][  1/140]	Time  9.171 ( 9.171)	Data  0.000 ( 0.000)	Loss 0.2435 (0.2435)
+Epoch: [12][ 11/140]	Time  8.951 ( 9.002)	Data  0.000 ( 0.000)	Loss 0.2834 (0.2520)
+Epoch: [12][ 21/140]	Time  8.988 ( 8.995)	Data  0.000 ( 0.000)	Loss 0.2004 (0.2359)
+Epoch: [12][ 31/140]	Time  8.982 ( 8.990)	Data  0.000 ( 0.000)	Loss 0.2220 (0.2316)
+Epoch: [12][ 41/140]	Time  8.962 ( 8.990)	Data  0.000 ( 0.000)	Loss 0.1650 (0.2243)
+Epoch: [12][ 51/140]	Time  8.978 ( 8.988)	Data  0.000 ( 0.000)	Loss 0.1995 (0.2260)
+Epoch: [12][ 61/140]	Time  9.030 ( 8.990)	Data  0.000 ( 0.000)	Loss 0.1992 (0.2276)
+Epoch: [12][ 71/140]	Time  9.049 ( 8.993)	Data  0.000 ( 0.000)	Loss 0.1971 (0.2291)
+Epoch: [12][ 81/140]	Time  8.989 ( 8.993)	Data  0.000 ( 0.000)	Loss 0.2174 (0.2322)
+Epoch: [12][ 91/140]	Time  9.039 ( 8.994)	Data  0.000 ( 0.000)	Loss 0.4867 (0.2420)
+Epoch: [12][101/140]	Time  9.001 ( 8.995)	Data  0.000 ( 0.000)	Loss 0.5807 (0.2801)
+Epoch: [12][111/140]	Time  8.892 ( 8.994)	Data  0.000 ( 0.000)	Loss 0.5014 (0.3051)
+Epoch: [12][121/140]	Time  9.021 ( 8.993)	Data  0.000 ( 0.000)	Loss 0.3551 (0.3142)
+Epoch: [12][131/140]	Time  9.032 ( 8.999)	Data  0.000 ( 0.000)	Loss 0.2919 (0.3239)
+epoch: 12 train_loss: 0.330 val_loss: 0.356
+Epoch: [13][  1/140]	Time  9.194 ( 9.194)	Data  0.000 ( 0.000)	Loss 0.3370 (0.3370)
+Epoch: [13][ 11/140]	Time  9.073 ( 9.099)	Data  0.000 ( 0.000)	Loss 0.2594 (0.3179)
+Epoch: [13][ 21/140]	Time  9.031 ( 9.051)	Data  0.000 ( 0.000)	Loss 0.2826 (0.2998)
+Epoch: [13][ 31/140]	Time  9.051 ( 9.040)	Data  0.000 ( 0.000)	Loss 0.3171 (0.2963)
+Epoch: [13][ 41/140]	Time  8.967 ( 9.029)	Data  0.000 ( 0.000)	Loss 0.3256 (0.2918)
+Epoch: [13][ 51/140]	Time  9.285 ( 9.031)	Data  0.000 ( 0.000)	Loss 0.3111 (0.2873)
+Epoch: [13][ 61/140]	Time  9.167 ( 9.049)	Data  0.000 ( 0.000)	Loss 0.3172 (0.2853)
+Epoch: [13][ 71/140]	Time  9.085 ( 9.058)	Data  0.000 ( 0.000)	Loss 0.2423 (0.2876)
+Epoch: [13][ 81/140]	Time  9.139 ( 9.068)	Data  0.000 ( 0.000)	Loss 0.2431 (0.2861)
+Epoch: [13][ 91/140]	Time  9.002 ( 9.062)	Data  0.000 ( 0.000)	Loss 0.3632 (0.2855)
+Epoch: [13][101/140]	Time  8.994 ( 9.058)	Data  0.000 ( 0.000)	Loss 0.2926 (0.2866)
+Epoch: [13][111/140]	Time  9.050 ( 9.056)	Data  0.000 ( 0.000)	Loss 0.2959 (0.2843)
+Epoch: [13][121/140]	Time  8.869 ( 9.052)	Data  0.000 ( 0.000)	Loss 0.2974 (0.2833)
+Epoch: [13][131/140]	Time  9.027 ( 9.050)	Data  0.000 ( 0.000)	Loss 0.8618 (0.3124)
+epoch: 13 train_loss: 0.335 val_loss: 0.763
+Epoch: [14][  1/140]	Time  9.215 ( 9.215)	Data  0.000 ( 0.000)	Loss 0.5667 (0.5667)
+Epoch: [14][ 11/140]	Time  9.040 ( 9.029)	Data  0.000 ( 0.000)	Loss 0.9544 (0.7698)
+Epoch: [14][ 21/140]	Time  9.040 ( 9.030)	Data  0.000 ( 0.000)	Loss 0.7134 (0.7542)
+Epoch: [14][ 31/140]	Time  9.070 ( 9.027)	Data  0.000 ( 0.000)	Loss 0.5296 (0.7058)
+Epoch: [14][ 41/140]	Time  9.016 ( 9.037)	Data  0.000 ( 0.000)	Loss 0.3710 (0.6494)
+Epoch: [14][ 51/140]	Time  9.135 ( 9.037)	Data  0.000 ( 0.000)	Loss 0.3095 (0.6028)
+Epoch: [14][ 61/140]	Time  9.101 ( 9.038)	Data  0.000 ( 0.000)	Loss 0.4457 (0.5639)
+Epoch: [14][ 71/140]	Time  9.013 ( 9.037)	Data  0.000 ( 0.000)	Loss 0.2752 (0.5331)
+Epoch: [14][ 81/140]	Time  9.097 ( 9.035)	Data  0.000 ( 0.000)	Loss 0.3238 (0.5071)
+Epoch: [14][ 91/140]	Time  9.127 ( 9.037)	Data  0.000 ( 0.000)	Loss 0.2759 (0.4852)
+Epoch: [14][101/140]	Time  9.009 ( 9.035)	Data  0.000 ( 0.000)	Loss 0.3785 (0.4670)
+Epoch: [14][111/140]	Time  9.017 ( 9.036)	Data  0.000 ( 0.000)	Loss 0.3765 (0.4522)
+Epoch: [14][121/140]	Time  9.082 ( 9.036)	Data  0.000 ( 0.000)	Loss 0.2800 (0.4373)
+Epoch: [14][131/140]	Time  9.015 ( 9.034)	Data  0.000 ( 0.000)	Loss 0.2113 (0.4267)
+epoch: 14 train_loss: 0.417 val_loss: 0.258
+Epoch: [15][  1/140]	Time  9.184 ( 9.184)	Data  0.000 ( 0.000)	Loss 0.2845 (0.2845)
+Epoch: [15][ 11/140]	Time  9.028 ( 9.033)	Data  0.000 ( 0.000)	Loss 0.2175 (0.2526)
+Epoch: [15][ 21/140]	Time  9.030 ( 9.022)	Data  0.000 ( 0.000)	Loss 0.3058 (0.2597)
+Epoch: [15][ 31/140]	Time  9.055 ( 9.025)	Data  0.000 ( 0.000)	Loss 0.2587 (0.2642)
+Epoch: [15][ 41/140]	Time  9.012 ( 9.025)	Data  0.000 ( 0.000)	Loss 0.2459 (0.2647)
+Epoch: [15][ 51/140]	Time  9.066 ( 9.029)	Data  0.000 ( 0.000)	Loss 0.3806 (0.2663)
+Epoch: [15][ 61/140]	Time  9.055 ( 9.030)	Data  0.000 ( 0.000)	Loss 0.2092 (0.2600)
+Epoch: [15][ 71/140]	Time  9.008 ( 9.031)	Data  0.000 ( 0.000)	Loss 0.2053 (0.2584)
+Epoch: [15][ 81/140]	Time  9.027 ( 9.030)	Data  0.000 ( 0.000)	Loss 0.2119 (0.2554)
+Epoch: [15][ 91/140]	Time  9.113 ( 9.031)	Data  0.000 ( 0.000)	Loss 0.1772 (0.2552)
+Epoch: [15][101/140]	Time  9.040 ( 9.030)	Data  0.000 ( 0.000)	Loss 0.2253 (0.2522)
+Epoch: [15][111/140]	Time  9.032 ( 9.029)	Data  0.000 ( 0.000)	Loss 0.2318 (0.2513)
+Epoch: [15][121/140]	Time  9.031 ( 9.029)	Data  0.000 ( 0.000)	Loss 0.2486 (0.2508)
+Epoch: [15][131/140]	Time  9.025 ( 9.029)	Data  0.000 ( 0.000)	Loss 0.1662 (0.2475)
+epoch: 15 train_loss: 0.247 val_loss: 0.233
+Epoch: [16][  1/140]	Time  9.144 ( 9.144)	Data  0.000 ( 0.000)	Loss 0.2903 (0.2903)
+Epoch: [16][ 11/140]	Time  8.988 ( 9.046)	Data  0.000 ( 0.000)	Loss 0.1915 (0.2332)
+Epoch: [16][ 21/140]	Time  9.004 ( 9.040)	Data  0.000 ( 0.000)	Loss 0.2507 (0.2291)
+Epoch: [16][ 31/140]	Time  9.013 ( 9.042)	Data  0.000 ( 0.000)	Loss 0.2656 (0.2279)
+Epoch: [16][ 41/140]	Time  9.061 ( 9.055)	Data  0.000 ( 0.000)	Loss 0.2695 (0.2348)
+Epoch: [16][ 51/140]	Time  9.013 ( 9.060)	Data  0.000 ( 0.000)	Loss 0.2199 (0.2359)
+Epoch: [16][ 61/140]	Time  9.064 ( 9.064)	Data  0.000 ( 0.000)	Loss 0.1886 (0.2332)
+Epoch: [16][ 71/140]	Time  9.068 ( 9.063)	Data  0.000 ( 0.000)	Loss 0.1959 (0.2337)
+Epoch: [16][ 81/140]	Time  9.090 ( 9.063)	Data  0.000 ( 0.000)	Loss 0.2121 (0.2342)
+Epoch: [16][ 91/140]	Time  8.994 ( 9.061)	Data  0.000 ( 0.000)	Loss 0.2725 (0.2344)
+Epoch: [16][101/140]	Time  8.986 ( 9.061)	Data  0.000 ( 0.000)	Loss 0.2524 (0.2343)
+Epoch: [16][111/140]	Time  8.927 ( 9.059)	Data  0.000 ( 0.000)	Loss 0.2610 (0.2334)
+Epoch: [16][121/140]	Time  8.989 ( 9.056)	Data  0.000 ( 0.000)	Loss 0.2088 (0.2319)
+Epoch: [16][131/140]	Time  8.959 ( 9.055)	Data  0.000 ( 0.000)	Loss 0.1942 (0.2309)
+epoch: 16 train_loss: 0.230 val_loss: 0.231
+Epoch: [17][  1/140]	Time  9.150 ( 9.150)	Data  0.000 ( 0.000)	Loss 0.2085 (0.2085)
+Epoch: [17][ 11/140]	Time  9.034 ( 9.025)	Data  0.000 ( 0.000)	Loss 0.2417 (0.2436)
+Epoch: [17][ 21/140]	Time  9.002 ( 9.032)	Data  0.000 ( 0.000)	Loss 0.2018 (0.2378)
+Epoch: [17][ 31/140]	Time  9.138 ( 9.036)	Data  0.000 ( 0.000)	Loss 0.2211 (0.2324)
+Epoch: [17][ 41/140]	Time  9.158 ( 9.073)	Data  0.000 ( 0.000)	Loss 0.2546 (0.2285)
+Epoch: [17][ 51/140]	Time  9.128 ( 9.101)	Data  0.000 ( 0.000)	Loss 0.2190 (0.2250)
+Epoch: [17][ 61/140]	Time  9.085 ( 9.107)	Data  0.000 ( 0.000)	Loss 0.1996 (0.2227)
+Epoch: [17][ 71/140]	Time  9.168 ( 9.133)	Data  0.000 ( 0.000)	Loss 0.2875 (0.2192)
+Epoch: [17][ 81/140]	Time  9.183 ( 9.148)	Data  0.000 ( 0.000)	Loss 0.2684 (0.2182)
+Epoch: [17][ 91/140]	Time  9.328 ( 9.161)	Data  0.000 ( 0.000)	Loss 0.1526 (0.2148)
+Epoch: [17][101/140]	Time  9.320 ( 9.178)	Data  0.000 ( 0.000)	Loss 0.1699 (0.2132)
+Epoch: [17][111/140]	Time  9.158 ( 9.186)	Data  0.000 ( 0.000)	Loss 0.1529 (0.2124)
+Epoch: [17][121/140]	Time  9.212 ( 9.193)	Data  0.000 ( 0.000)	Loss 0.2150 (0.2133)
+Epoch: [17][131/140]	Time  9.300 ( 9.201)	Data  0.000 ( 0.000)	Loss 0.1713 (0.2104)
+epoch: 17 train_loss: 0.210 val_loss: 0.207
+Epoch: [18][  1/140]	Time  9.395 ( 9.395)	Data  0.000 ( 0.000)	Loss 0.1730 (0.1730)
+Epoch: [18][ 11/140]	Time  9.192 ( 9.263)	Data  0.000 ( 0.000)	Loss 0.2383 (0.2014)
+Epoch: [18][ 21/140]	Time  9.518 ( 9.496)	Data  0.000 ( 0.000)	Loss 0.2822 (0.1984)
+Epoch: [18][ 31/140]	Time  9.394 ( 9.487)	Data  0.000 ( 0.000)	Loss 0.1847 (0.2072)
+Epoch: [18][ 41/140]	Time  9.691 ( 9.496)	Data  0.000 ( 0.000)	Loss 0.1677 (0.2074)
+Epoch: [18][ 51/140]	Time  9.671 ( 9.518)	Data  0.000 ( 0.000)	Loss 0.2045 (0.2060)
+Epoch: [18][ 61/140]	Time  9.777 ( 9.530)	Data  0.000 ( 0.000)	Loss 0.2586 (0.2070)
+Epoch: [18][ 71/140]	Time  9.817 ( 9.545)	Data  0.000 ( 0.000)	Loss 0.2322 (0.2094)
+Epoch: [18][ 81/140]	Time  9.716 ( 9.571)	Data  0.000 ( 0.000)	Loss 0.1753 (0.2057)
+Epoch: [18][ 91/140]	Time  9.503 ( 9.578)	Data  0.000 ( 0.000)	Loss 0.1718 (0.2058)
+Epoch: [18][101/140]	Time  9.672 ( 9.580)	Data  0.000 ( 0.000)	Loss 0.2350 (0.2052)
+Epoch: [18][111/140]	Time  9.780 ( 9.583)	Data  0.000 ( 0.000)	Loss 0.2140 (0.2058)
+Epoch: [18][121/140]	Time  9.633 ( 9.585)	Data  0.000 ( 0.000)	Loss 0.2033 (0.2063)
+Epoch: [18][131/140]	Time  9.867 ( 9.581)	Data  0.000 ( 0.000)	Loss 0.1617 (0.2047)
+epoch: 18 train_loss: 0.205 val_loss: 0.188
+Epoch: [19][  1/140]	Time 12.484 (12.484)	Data  0.000 ( 0.000)	Loss 0.1879 (0.1879)
+Epoch: [19][ 11/140]	Time 12.206 (12.273)	Data  0.000 ( 0.000)	Loss 0.2152 (0.1771)
+Epoch: [19][ 21/140]	Time 12.539 (12.329)	Data  0.000 ( 0.000)	Loss 0.1934 (0.1833)
+Epoch: [19][ 31/140]	Time 10.062 (11.901)	Data  0.000 ( 0.000)	Loss 0.1778 (0.1831)
+Epoch: [19][ 41/140]	Time 12.081 (11.843)	Data  0.000 ( 0.000)	Loss 0.1825 (0.1843)
+Epoch: [19][ 51/140]	Time 11.775 (11.917)	Data  0.000 ( 0.000)	Loss 0.1307 (0.1820)
+Epoch: [19][ 61/140]	Time 11.297 (11.964)	Data  0.000 ( 0.000)	Loss 0.1432 (0.1795)
+Epoch: [19][ 71/140]	Time 10.082 (11.703)	Data  0.000 ( 0.000)	Loss 0.1906 (0.1816)
+Epoch: [19][ 81/140]	Time 12.252 (11.695)	Data  0.000 ( 0.000)	Loss 0.2040 (0.1813)
+Epoch: [19][ 91/140]	Time 12.527 (11.760)	Data  0.000 ( 0.000)	Loss 0.2095 (0.1822)
+Epoch: [19][101/140]	Time 10.258 (11.652)	Data  0.000 ( 0.000)	Loss 0.1596 (0.1838)
+Epoch: [19][111/140]	Time 10.342 (11.527)	Data  0.000 ( 0.000)	Loss 0.1677 (0.1836)
+Epoch: [19][121/140]	Time 10.492 (11.432)	Data  0.000 ( 0.000)	Loss 0.1885 (0.1836)
+Epoch: [19][131/140]	Time 12.474 (11.522)	Data  0.000 ( 0.000)	Loss 0.1818 (0.1822)
+epoch: 19 train_loss: 0.183 val_loss: 0.195
+Epoch: [20][  1/140]	Time  9.141 ( 9.141)	Data  0.000 ( 0.000)	Loss 0.1489 (0.1489)
+Epoch: [20][ 11/140]	Time  8.939 ( 9.001)	Data  0.000 ( 0.000)	Loss 0.1425 (0.1794)
+Epoch: [20][ 21/140]	Time  8.950 ( 8.997)	Data  0.000 ( 0.000)	Loss 0.1668 (0.1810)
+Epoch: [20][ 31/140]	Time  8.993 ( 8.991)	Data  0.000 ( 0.000)	Loss 0.1647 (0.1760)
+Epoch: [20][ 41/140]	Time  9.011 ( 8.986)	Data  0.000 ( 0.000)	Loss 0.2122 (0.1752)
+Epoch: [20][ 51/140]	Time  9.038 ( 8.989)	Data  0.000 ( 0.000)	Loss 0.1704 (0.1749)
+Epoch: [20][ 61/140]	Time  8.990 ( 8.987)	Data  0.000 ( 0.000)	Loss 0.1676 (0.1776)
+Epoch: [20][ 71/140]	Time  8.925 ( 8.988)	Data  0.000 ( 0.000)	Loss 0.2161 (0.1820)
+Epoch: [20][ 81/140]	Time  8.919 ( 8.988)	Data  0.000 ( 0.000)	Loss 0.2223 (0.1815)
+Epoch: [20][ 91/140]	Time  9.034 ( 8.989)	Data  0.000 ( 0.000)	Loss 0.1616 (0.1812)
+Epoch: [20][101/140]	Time  8.991 ( 8.987)	Data  0.000 ( 0.000)	Loss 0.1860 (0.1803)
+Epoch: [20][111/140]	Time  8.961 ( 8.986)	Data  0.000 ( 0.000)	Loss 0.1539 (0.1796)
+Epoch: [20][121/140]	Time  8.982 ( 8.984)	Data  0.000 ( 0.000)	Loss 0.1458 (0.1787)
+Epoch: [20][131/140]	Time  9.031 ( 8.984)	Data  0.000 ( 0.000)	Loss 0.2077 (0.1783)
+epoch: 20 train_loss: 0.179 val_loss: 0.187
+Epoch: [21][  1/140]	Time  9.232 ( 9.232)	Data  0.000 ( 0.000)	Loss 0.1579 (0.1579)
+Epoch: [21][ 11/140]	Time  8.959 ( 9.003)	Data  0.000 ( 0.000)	Loss 0.1597 (0.1603)
+Epoch: [21][ 21/140]	Time  8.982 ( 8.995)	Data  0.000 ( 0.000)	Loss 0.1481 (0.1649)
+Epoch: [21][ 31/140]	Time  9.013 ( 8.990)	Data  0.000 ( 0.000)	Loss 0.1767 (0.1636)
+Epoch: [21][ 41/140]	Time  9.068 ( 8.995)	Data  0.000 ( 0.000)	Loss 0.1628 (0.1677)
+Epoch: [21][ 51/140]	Time  9.184 ( 9.014)	Data  0.000 ( 0.000)	Loss 0.1925 (0.1730)
+Epoch: [21][ 61/140]	Time  9.187 ( 9.033)	Data  0.000 ( 0.000)	Loss 0.1607 (0.1749)
+Epoch: [21][ 71/140]	Time  9.159 ( 9.059)	Data  0.000 ( 0.000)	Loss 0.1901 (0.1738)
+Epoch: [21][ 81/140]	Time  9.263 ( 9.076)	Data  0.000 ( 0.000)	Loss 0.1523 (0.1733)
+Epoch: [21][ 91/140]	Time  9.245 ( 9.091)	Data  0.000 ( 0.000)	Loss 0.1654 (0.1743)
+Epoch: [21][101/140]	Time  9.174 ( 9.111)	Data  0.000 ( 0.000)	Loss 0.1597 (0.1754)
+Epoch: [21][111/140]	Time  9.333 ( 9.124)	Data  0.000 ( 0.000)	Loss 0.1596 (0.1772)
+Epoch: [21][121/140]	Time  9.283 ( 9.139)	Data  0.000 ( 0.000)	Loss 0.1951 (0.1769)
+Epoch: [21][131/140]	Time  9.402 ( 9.156)	Data  0.000 ( 0.000)	Loss 0.1494 (0.1765)
+epoch: 21 train_loss: 0.175 val_loss: 0.198
+Epoch: [22][  1/140]	Time 10.788 (10.788)	Data  0.000 ( 0.000)	Loss 0.1728 (0.1728)
+Epoch: [22][ 11/140]	Time 12.670 (11.264)	Data  0.000 ( 0.000)	Loss 0.2336 (0.1729)
+Epoch: [22][ 21/140]	Time 12.030 (11.761)	Data  0.000 ( 0.000)	Loss 0.1584 (0.1692)
+Epoch: [22][ 31/140]	Time 10.174 (11.553)	Data  0.000 ( 0.000)	Loss 0.1792 (0.1677)
+Epoch: [22][ 41/140]	Time  9.954 (11.181)	Data  0.000 ( 0.000)	Loss 0.1671 (0.1707)
+Epoch: [22][ 51/140]	Time  9.941 (10.941)	Data  0.000 ( 0.000)	Loss 0.1488 (0.1707)
+Epoch: [22][ 61/140]	Time  9.874 (10.776)	Data  0.000 ( 0.000)	Loss 0.1546 (0.1689)
+Epoch: [22][ 71/140]	Time  9.964 (10.676)	Data  0.000 ( 0.000)	Loss 0.1426 (0.1676)
+Epoch: [22][ 81/140]	Time 10.111 (10.600)	Data  0.000 ( 0.000)	Loss 0.1992 (0.1671)
+Epoch: [22][ 91/140]	Time  9.984 (10.564)	Data  0.000 ( 0.000)	Loss 0.1941 (0.1665)
+Epoch: [22][101/140]	Time 10.018 (10.527)	Data  0.000 ( 0.000)	Loss 0.1477 (0.1663)
+Epoch: [22][111/140]	Time 10.091 (10.490)	Data  0.000 ( 0.000)	Loss 0.1840 (0.1676)
+Epoch: [22][121/140]	Time 10.224 (10.468)	Data  0.000 ( 0.000)	Loss 0.1977 (0.1683)
+Epoch: [22][131/140]	Time 12.527 (10.482)	Data  0.000 ( 0.000)	Loss 0.1737 (0.1679)
+epoch: 22 train_loss: 0.167 val_loss: 0.183
+Epoch: [23][  1/140]	Time 10.830 (10.830)	Data  0.000 ( 0.000)	Loss 0.1404 (0.1404)
+Epoch: [23][ 11/140]	Time 10.517 (10.724)	Data  0.000 ( 0.000)	Loss 0.1597 (0.1752)
+Epoch: [23][ 21/140]	Time 10.781 (10.702)	Data  0.000 ( 0.000)	Loss 0.1376 (0.1657)
+Epoch: [23][ 31/140]	Time 10.462 (10.648)	Data  0.000 ( 0.000)	Loss 0.1517 (0.1612)
+Epoch: [23][ 41/140]	Time 10.459 (10.633)	Data  0.000 ( 0.000)	Loss 0.1700 (0.1661)
+Epoch: [23][ 51/140]	Time 10.602 (10.621)	Data  0.000 ( 0.000)	Loss 0.2039 (0.1707)
+Epoch: [23][ 61/140]	Time 10.470 (10.613)	Data  0.000 ( 0.000)	Loss 0.1502 (0.1751)
+Epoch: [23][ 71/140]	Time 10.574 (10.601)	Data  0.000 ( 0.000)	Loss 0.1563 (0.1753)
+Epoch: [23][ 81/140]	Time 10.573 (10.599)	Data  0.000 ( 0.000)	Loss 0.1295 (0.1731)
+Epoch: [23][ 91/140]	Time 10.653 (10.599)	Data  0.000 ( 0.000)	Loss 0.1606 (0.1721)
+Epoch: [23][101/140]	Time 10.668 (10.587)	Data  0.000 ( 0.000)	Loss 0.1702 (0.1724)
+Epoch: [23][111/140]	Time 10.453 (10.571)	Data  0.000 ( 0.000)	Loss 0.1564 (0.1698)
+Epoch: [23][121/140]	Time 10.446 (10.555)	Data  0.000 ( 0.000)	Loss 0.1324 (0.1698)
+Epoch: [23][131/140]	Time 10.198 (10.533)	Data  0.000 ( 0.000)	Loss 0.1356 (0.1694)
+epoch: 23 train_loss: 0.170 val_loss: 0.183
+Epoch: [24][  1/140]	Time 10.674 (10.674)	Data  0.000 ( 0.000)	Loss 0.1567 (0.1567)
+Epoch: [24][ 11/140]	Time 10.395 (10.424)	Data  0.000 ( 0.000)	Loss 0.1216 (0.1558)
+Epoch: [24][ 21/140]	Time 10.543 (10.428)	Data  0.000 ( 0.000)	Loss 0.1458 (0.1573)
+Epoch: [24][ 31/140]	Time 10.336 (10.420)	Data  0.000 ( 0.000)	Loss 0.1579 (0.1584)
+Epoch: [24][ 41/140]	Time 10.299 (10.425)	Data  0.000 ( 0.000)	Loss 0.1570 (0.1612)
+Epoch: [24][ 51/140]	Time 10.328 (10.417)	Data  0.000 ( 0.000)	Loss 0.1477 (0.1662)
+Epoch: [24][ 61/140]	Time 10.398 (10.421)	Data  0.000 ( 0.000)	Loss 0.1890 (0.1654)
+Epoch: [24][ 71/140]	Time 10.441 (10.423)	Data  0.000 ( 0.000)	Loss 0.1870 (0.1640)
+Epoch: [24][ 81/140]	Time 10.167 (10.414)	Data  0.000 ( 0.000)	Loss 0.2043 (0.1647)
+Epoch: [24][ 91/140]	Time 10.258 (10.396)	Data  0.000 ( 0.000)	Loss 0.1494 (0.1634)
+Epoch: [24][101/140]	Time 10.267 (10.372)	Data  0.000 ( 0.000)	Loss 0.1585 (0.1628)
+Epoch: [24][111/140]	Time 10.114 (10.353)	Data  0.000 ( 0.000)	Loss 0.1818 (0.1631)
+Epoch: [24][121/140]	Time 10.566 (10.343)	Data  0.000 ( 0.000)	Loss 0.1519 (0.1640)
+Epoch: [24][131/140]	Time 10.376 (10.354)	Data  0.000 ( 0.000)	Loss 0.1852 (0.1641)
+epoch: 24 train_loss: 0.163 val_loss: 0.224
+Epoch: [25][  1/140]	Time 11.540 (11.540)	Data  0.000 ( 0.000)	Loss 0.1715 (0.1715)
+Epoch: [25][ 11/140]	Time 10.652 (10.905)	Data  0.000 ( 0.000)	Loss 0.2117 (0.2098)
+Epoch: [25][ 21/140]	Time 10.528 (10.749)	Data  0.000 ( 0.000)	Loss 0.2391 (0.2022)
+Epoch: [25][ 31/140]	Time 10.435 (10.704)	Data  0.000 ( 0.000)	Loss 0.2005 (0.2062)
+Epoch: [25][ 41/140]	Time 12.358 (10.872)	Data  0.000 ( 0.000)	Loss 0.1681 (0.2009)
+Epoch: [25][ 51/140]	Time 12.623 (11.223)	Data  0.000 ( 0.000)	Loss 0.2012 (0.1971)
+Epoch: [25][ 61/140]	Time 10.505 (11.138)	Data  0.000 ( 0.000)	Loss 0.1317 (0.1923)
+Epoch: [25][ 71/140]	Time 10.291 (11.030)	Data  0.000 ( 0.000)	Loss 0.2077 (0.1939)
+Epoch: [25][ 81/140]	Time 10.205 (10.936)	Data  0.000 ( 0.000)	Loss 0.1566 (0.1930)
+Epoch: [25][ 91/140]	Time 10.332 (10.859)	Data  0.000 ( 0.000)	Loss 0.3002 (0.1930)
+Epoch: [25][101/140]	Time 10.467 (10.805)	Data  0.000 ( 0.000)	Loss 0.1716 (0.1902)
+Epoch: [25][111/140]	Time 12.535 (10.957)	Data  0.000 ( 0.000)	Loss 0.1368 (0.1880)
+Epoch: [25][121/140]	Time 10.262 (11.018)	Data  0.000 ( 0.000)	Loss 0.1626 (0.1852)
+Epoch: [25][131/140]	Time 10.232 (10.959)	Data  0.000 ( 0.000)	Loss 0.1551 (0.1840)
+epoch: 25 train_loss: 0.183 val_loss: 0.192
+Epoch: [26][  1/140]	Time 11.161 (11.161)	Data  0.000 ( 0.000)	Loss 0.1851 (0.1851)
+Epoch: [26][ 11/140]	Time 10.107 (10.277)	Data  0.000 ( 0.000)	Loss 0.1562 (0.1569)
+Epoch: [26][ 21/140]	Time 10.082 (10.085)	Data  0.000 ( 0.000)	Loss 0.1545 (0.1568)
+Epoch: [26][ 31/140]	Time  9.960 (10.133)	Data  0.000 ( 0.000)	Loss 0.1365 (0.1556)
+Epoch: [26][ 41/140]	Time  9.193 (10.048)	Data  0.000 ( 0.000)	Loss 0.1844 (0.1579)
+Epoch: [26][ 51/140]	Time 10.059 (10.014)	Data  0.000 ( 0.000)	Loss 0.1235 (0.1607)
+Epoch: [26][ 61/140]	Time  9.449 (10.032)	Data  0.000 ( 0.000)	Loss 0.1462 (0.1594)
+Epoch: [26][ 71/140]	Time 10.206 (10.017)	Data  0.000 ( 0.000)	Loss 0.1411 (0.1586)
+Epoch: [26][ 81/140]	Time 10.094 (10.063)	Data  0.000 ( 0.000)	Loss 0.1459 (0.1573)
+Epoch: [26][ 91/140]	Time 10.072 (10.043)	Data  0.000 ( 0.000)	Loss 0.1837 (0.1572)
+Epoch: [26][101/140]	Time  9.999 (10.091)	Data  0.000 ( 0.000)	Loss 0.1577 (0.1578)
+Epoch: [26][111/140]	Time  9.574 (10.067)	Data  0.000 ( 0.000)	Loss 0.1657 (0.1576)
+Epoch: [26][121/140]	Time 10.704 (10.100)	Data  0.000 ( 0.000)	Loss 0.1897 (0.1575)
+Epoch: [26][131/140]	Time 10.229 (10.092)	Data  0.000 ( 0.000)	Loss 0.1247 (0.1570)
+
+epoch: 26 train_loss: 0.157 val_loss: 0.179
+Epoch: [27][  1/140]	Time 11.877 (11.877)	Data  0.000 ( 0.000)	Loss 0.1292 (0.1292)
+Epoch: [27][ 11/140]	Time 10.374 (10.795)	Data  0.000 ( 0.000)	Loss 0.1515 (0.1570)
+Epoch: [27][ 21/140]	Time 10.649 (10.742)	Data  0.000 ( 0.000)	Loss 0.1420 (0.1541)
+Epoch: [27][ 31/140]	Time 10.577 (10.746)	Data  0.000 ( 0.000)	Loss 0.1388 (0.1547)
+Epoch: [27][ 41/140]	Time 10.632 (10.726)	Data  0.000 ( 0.000)	Loss 0.1784 (0.1565)
+Epoch: [27][ 51/140]	Time 10.601 (10.692)	Data  0.000 ( 0.000)	Loss 0.1761 (0.1608)
+Epoch: [27][ 61/140]	Time 10.539 (10.682)	Data  0.000 ( 0.000)	Loss 0.1827 (0.1635)
+Epoch: [27][ 71/140]	Time 10.670 (10.677)	Data  0.000 ( 0.000)	Loss 0.1386 (0.1619)
+Epoch: [27][ 81/140]	Time 10.538 (10.671)	Data  0.000 ( 0.000)	Loss 0.1491 (0.1604)
+Epoch: [27][ 91/140]	Time 10.521 (10.671)	Data  0.000 ( 0.000)	Loss 0.1435 (0.1604)
+Epoch: [27][101/140]	Time 10.707 (10.661)	Data  0.000 ( 0.000)	Loss 0.1500 (0.1608)
+Epoch: [27][111/140]	Time 10.951 (10.657)	Data  0.000 ( 0.000)	Loss 0.1479 (0.1600)
+Epoch: [27][121/140]	Time 10.713 (10.656)	Data  0.000 ( 0.000)	Loss 0.1290 (0.1590)
+Epoch: [27][131/140]	Time 10.484 (10.640)	Data  0.000 ( 0.000)	Loss 0.1720 (0.1581)
+epoch: 27 train_loss: 0.157 val_loss: 0.179
+Epoch: [28][  1/140]	Time 10.842 (10.842)	Data  0.000 ( 0.000)	Loss 0.1321 (0.1321)
+Epoch: [28][ 11/140]	Time 10.252 (10.524)	Data  0.000 ( 0.000)	Loss 0.1492 (0.1484)
+Epoch: [28][ 21/140]	Time 10.679 (10.516)	Data  0.000 ( 0.000)	Loss 0.1185 (0.1428)
+Epoch: [28][ 31/140]	Time 10.202 (10.454)	Data  0.000 ( 0.000)	Loss 0.1176 (0.1431)
+Epoch: [28][ 41/140]	Time 10.448 (10.425)	Data  0.000 ( 0.000)	Loss 0.1482 (0.1443)
+Epoch: [28][ 51/140]	Time 10.755 (10.427)	Data  0.000 ( 0.000)	Loss 0.1151 (0.1447)
+Epoch: [28][ 61/140]	Time 10.499 (10.444)	Data  0.000 ( 0.000)	Loss 0.1321 (0.1446)
+Epoch: [28][ 71/140]	Time 10.390 (10.446)	Data  0.000 ( 0.000)	Loss 0.1434 (0.1455)
+Epoch: [28][ 81/140]	Time 10.502 (10.450)	Data  0.000 ( 0.000)	Loss 0.1320 (0.1456)
+Epoch: [28][ 91/140]	Time 10.583 (10.456)	Data  0.000 ( 0.000)	Loss 0.0942 (0.1453)
+Epoch: [28][101/140]	Time 10.400 (10.448)	Data  0.000 ( 0.000)	Loss 0.1734 (0.1470)
+Epoch: [28][111/140]	Time 10.145 (10.440)	Data  0.000 ( 0.000)	Loss 0.1935 (0.1477)
+Epoch: [28][121/140]	Time 10.247 (10.424)	Data  0.000 ( 0.000)	Loss 0.1757 (0.1497)
+Epoch: [28][131/140]	Time 10.200 (10.408)	Data  0.000 ( 0.000)	Loss 0.1326 (0.1514)
+epoch: 28 train_loss: 0.151 val_loss: 0.190
+Epoch: [29][  1/140]	Time 10.723 (10.723)	Data  0.000 ( 0.000)	Loss 0.1231 (0.1231)
+Epoch: [29][ 11/140]	Time 10.552 (10.566)	Data  0.000 ( 0.000)	Loss 0.1590 (0.1481)
+Epoch: [29][ 21/140]	Time 12.843 (11.448)	Data  0.000 ( 0.000)	Loss 0.1293 (0.1459)
+Epoch: [29][ 31/140]	Time 12.378 (11.765)	Data  0.000 ( 0.000)	Loss 0.1212 (0.1432)
+Epoch: [29][ 41/140]	Time 12.981 (11.972)	Data  0.000 ( 0.000)	Loss 0.1138 (0.1442)
+Epoch: [29][ 51/140]	Time 12.701 (12.080)	Data  0.000 ( 0.000)	Loss 0.1137 (0.1421)
+Epoch: [29][ 61/140]	Time 12.861 (12.135)	Data  0.000 ( 0.000)	Loss 0.1174 (0.1398)
+Epoch: [29][ 71/140]	Time 12.452 (12.163)	Data  0.000 ( 0.000)	Loss 0.1640 (0.1410)
+Epoch: [29][ 81/140]	Time 12.164 (12.187)	Data  0.000 ( 0.000)	Loss 0.1660 (0.1416)
+Epoch: [29][ 91/140]	Time 12.118 (12.202)	Data  0.000 ( 0.000)	Loss 0.0964 (0.1412)
+Epoch: [29][101/140]	Time 10.707 (12.034)	Data  0.000 ( 0.000)	Loss 0.1218 (0.1398)
+Epoch: [29][111/140]	Time 12.448 (11.992)	Data  0.000 ( 0.000)	Loss 0.1621 (0.1404)
+Epoch: [29][121/140]	Time 12.217 (12.032)	Data  0.000 ( 0.000)	Loss 0.1686 (0.1401)
+Epoch: [29][131/140]	Time 12.728 (12.058)	Data  0.000 ( 0.000)	Loss 0.1811 (0.1405)
+epoch: 29 train_loss: 0.140 val_loss: 0.161
+Epoch: [30][  1/140]	Time  9.266 ( 9.266)	Data  0.000 ( 0.000)	Loss 0.1441 (0.1441)
+Epoch: [30][ 11/140]	Time  9.064 ( 9.124)	Data  0.000 ( 0.000)	Loss 0.1538 (0.1323)
+Epoch: [30][ 21/140]	Time  9.156 ( 9.112)	Data  0.000 ( 0.000)	Loss 0.1476 (0.1307)
+Epoch: [30][ 31/140]	Time  9.160 ( 9.122)	Data  0.000 ( 0.000)	Loss 0.0937 (0.1247)
+Epoch: [30][ 41/140]	Time  9.063 ( 9.118)	Data  0.000 ( 0.000)	Loss 0.1183 (0.1215)
+Epoch: [30][ 51/140]	Time  9.172 ( 9.113)	Data  0.000 ( 0.000)	Loss 0.1330 (0.1219)
+Epoch: [30][ 61/140]	Time  9.113 ( 9.108)	Data  0.000 ( 0.000)	Loss 0.1079 (0.1212)
+Epoch: [30][ 71/140]	Time  9.086 ( 9.108)	Data  0.000 ( 0.000)	Loss 0.1362 (0.1202)
+Epoch: [30][ 81/140]	Time  9.061 ( 9.109)	Data  0.000 ( 0.000)	Loss 0.1102 (0.1188)
+Epoch: [30][ 91/140]	Time  9.107 ( 9.109)	Data  0.000 ( 0.000)	Loss 0.1362 (0.1174)
+Epoch: [30][101/140]	Time  9.085 ( 9.110)	Data  0.000 ( 0.000)	Loss 0.0987 (0.1163)
+Epoch: [30][111/140]	Time  9.280 ( 9.109)	Data  0.000 ( 0.000)	Loss 0.0899 (0.1161)
+Epoch: [30][121/140]	Time  9.116 ( 9.110)	Data  0.000 ( 0.000)	Loss 0.1023 (0.1154)
+Epoch: [30][131/140]	Time  9.155 ( 9.111)	Data  0.000 ( 0.000)	Loss 0.0912 (0.1149)
+epoch: 30 train_loss: 0.115 val_loss: 0.127
+Epoch: [31][  1/140]	Time  9.198 ( 9.198)	Data  0.000 ( 0.000)	Loss 0.1194 (0.1194)
+Epoch: [31][ 11/140]	Time  9.091 ( 9.092)	Data  0.000 ( 0.000)	Loss 0.1315 (0.1134)
+Epoch: [31][ 21/140]	Time  9.079 ( 9.075)	Data  0.000 ( 0.000)	Loss 0.0900 (0.1065)
+Epoch: [31][ 31/140]	Time  9.028 ( 9.070)	Data  0.000 ( 0.000)	Loss 0.1000 (0.1063)
+Epoch: [31][ 41/140]	Time  9.081 ( 9.063)	Data  0.000 ( 0.000)	Loss 0.0942 (0.1074)
+Epoch: [31][ 51/140]	Time  9.136 ( 9.054)	Data  0.000 ( 0.000)	Loss 0.0892 (0.1053)
+Epoch: [31][ 61/140]	Time  9.091 ( 9.051)	Data  0.000 ( 0.000)	Loss 0.1129 (0.1089)
+Epoch: [31][ 71/140]	Time  9.076 ( 9.045)	Data  0.000 ( 0.000)	Loss 0.1691 (0.1094)
+Epoch: [31][ 81/140]	Time  9.006 ( 9.039)	Data  0.000 ( 0.000)	Loss 0.1208 (0.1088)
+Epoch: [31][ 91/140]	Time  8.940 ( 9.035)	Data  0.000 ( 0.000)	Loss 0.0888 (0.1082)
+Epoch: [31][101/140]	Time  8.987 ( 9.034)	Data  0.000 ( 0.000)	Loss 0.1090 (0.1079)
+Epoch: [31][111/140]	Time  9.054 ( 9.035)	Data  0.000 ( 0.000)	Loss 0.0786 (0.1076)
+Epoch: [31][121/140]	Time  9.006 ( 9.034)	Data  0.000 ( 0.000)	Loss 0.1403 (0.1078)
+Epoch: [31][131/140]	Time  9.020 ( 9.035)	Data  0.000 ( 0.000)	Loss 0.0913 (0.1079)
+epoch: 31 train_loss: 0.108 val_loss: 0.123
+Epoch: [32][  1/140]	Time  9.192 ( 9.192)	Data  0.000 ( 0.000)	Loss 0.0877 (0.0877)
+Epoch: [32][ 11/140]	Time  9.023 ( 9.051)	Data  0.000 ( 0.000)	Loss 0.0882 (0.0996)
+Epoch: [32][ 21/140]	Time  8.981 ( 9.025)	Data  0.000 ( 0.000)	Loss 0.0864 (0.0992)
+Epoch: [32][ 31/140]	Time  9.102 ( 9.027)	Data  0.000 ( 0.000)	Loss 0.1113 (0.1006)
+Epoch: [32][ 41/140]	Time  9.045 ( 9.026)	Data  0.000 ( 0.000)	Loss 0.1080 (0.1015)
+Epoch: [32][ 51/140]	Time  9.076 ( 9.022)	Data  0.000 ( 0.000)	Loss 0.1000 (0.1018)
+Epoch: [32][ 61/140]	Time  9.087 ( 9.023)	Data  0.000 ( 0.000)	Loss 0.1139 (0.1027)
+Epoch: [32][ 71/140]	Time  9.093 ( 9.021)	Data  0.000 ( 0.000)	Loss 0.1541 (0.1041)
+Epoch: [32][ 81/140]	Time  8.999 ( 9.021)	Data  0.000 ( 0.000)	Loss 0.0994 (0.1046)
+Epoch: [32][ 91/140]	Time  9.011 ( 9.024)	Data  0.000 ( 0.000)	Loss 0.0966 (0.1038)
+Epoch: [32][101/140]	Time  8.997 ( 9.024)	Data  0.000 ( 0.000)	Loss 0.0886 (0.1042)
+Epoch: [32][111/140]	Time  9.039 ( 9.027)	Data  0.000 ( 0.000)	Loss 0.1083 (0.1038)
+Epoch: [32][121/140]	Time  9.012 ( 9.031)	Data  0.000 ( 0.000)	Loss 0.0904 (0.1036)
+Epoch: [32][131/140]	Time  9.184 ( 9.043)	Data  0.000 ( 0.000)	Loss 0.0940 (0.1032)
+epoch: 32 train_loss: 0.103 val_loss: 0.123
+Epoch: [33][  1/140]	Time 13.331 (13.331)	Data  0.000 ( 0.000)	Loss 0.1016 (0.1016)
+Epoch: [33][ 11/140]	Time 12.390 (12.577)	Data  0.000 ( 0.000)	Loss 0.1006 (0.0996)
+Epoch: [33][ 21/140]	Time 10.354 (12.392)	Data  0.000 ( 0.000)	Loss 0.1026 (0.0987)
+Epoch: [33][ 31/140]	Time 12.122 (11.965)	Data  0.000 ( 0.000)	Loss 0.0971 (0.0982)
+Epoch: [33][ 41/140]	Time 12.117 (12.018)	Data  0.000 ( 0.000)	Loss 0.1049 (0.1007)
+Epoch: [33][ 51/140]	Time 11.847 (12.051)	Data  0.000 ( 0.000)	Loss 0.1197 (0.1014)
+Epoch: [33][ 61/140]	Time 11.888 (12.082)	Data  0.000 ( 0.000)	Loss 0.1075 (0.1020)
+Epoch: [33][ 71/140]	Time 12.183 (12.103)	Data  0.000 ( 0.000)	Loss 0.0930 (0.1032)
+Epoch: [33][ 81/140]	Time 12.088 (11.944)	Data  0.000 ( 0.000)	Loss 0.0929 (0.1019)
+Epoch: [33][ 91/140]	Time 12.295 (11.973)	Data  0.000 ( 0.000)	Loss 0.0865 (0.1022)
+Epoch: [33][101/140]	Time 12.229 (11.995)	Data  0.000 ( 0.000)	Loss 0.0821 (0.1016)
+Epoch: [33][111/140]	Time 12.078 (12.009)	Data  0.000 ( 0.000)	Loss 0.0945 (0.1022)
+Epoch: [33][121/140]	Time 12.358 (12.008)	Data  0.000 ( 0.000)	Loss 0.0953 (0.1020)
+Epoch: [33][131/140]	Time 10.165 (11.968)	Data  0.000 ( 0.000)	Loss 0.0934 (0.1021)
+epoch: 33 train_loss: 0.102 val_loss: 0.121
+Epoch: [34][  1/140]	Time 12.381 (12.381)	Data  0.000 ( 0.000)	Loss 0.0853 (0.0853)
+Epoch: [34][ 11/140]	Time 11.560 (11.536)	Data  0.000 ( 0.000)	Loss 0.1128 (0.1016)
+Epoch: [34][ 21/140]	Time 11.860 (11.429)	Data  0.000 ( 0.000)	Loss 0.1003 (0.0977)
+Epoch: [34][ 31/140]	Time 11.329 (11.393)	Data  0.000 ( 0.000)	Loss 0.0773 (0.0954)
+Epoch: [34][ 41/140]	Time 11.684 (11.338)	Data  0.000 ( 0.000)	Loss 0.0741 (0.0974)
+Epoch: [34][ 51/140]	Time 10.791 (11.296)	Data  0.000 ( 0.000)	Loss 0.0919 (0.0971)
+Epoch: [34][ 61/140]	Time 11.999 (11.310)	Data  0.000 ( 0.000)	Loss 0.1072 (0.0997)
+Epoch: [34][ 71/140]	Time 10.729 (11.311)	Data  0.000 ( 0.000)	Loss 0.1422 (0.1014)
+Epoch: [34][ 81/140]	Time 11.147 (11.288)	Data  0.000 ( 0.000)	Loss 0.0904 (0.1011)
+Epoch: [34][ 91/140]	Time  9.698 (11.159)	Data  0.000 ( 0.000)	Loss 0.0861 (0.1017)
+Epoch: [34][101/140]	Time 10.632 (11.124)	Data  0.000 ( 0.000)	Loss 0.0911 (0.1023)
+Epoch: [34][111/140]	Time 11.308 (11.115)	Data  0.000 ( 0.000)	Loss 0.0859 (0.1024)
+Epoch: [34][121/140]	Time 11.279 (11.110)	Data  0.000 ( 0.000)	Loss 0.0941 (0.1022)
+Epoch: [34][131/140]	Time 10.611 (11.101)	Data  0.000 ( 0.000)	Loss 0.1250 (0.1017)
+epoch: 34 train_loss: 0.102 val_loss: 0.121
+Epoch: [35][  1/140]	Time 12.661 (12.661)	Data  0.000 ( 0.000)	Loss 0.0974 (0.0974)
+Epoch: [35][ 11/140]	Time 12.266 (12.305)	Data  0.000 ( 0.000)	Loss 0.0998 (0.1040)
+Epoch: [35][ 21/140]	Time 11.712 (11.423)	Data  0.000 ( 0.000)	Loss 0.0942 (0.1018)
+Epoch: [35][ 31/140]	Time 12.151 (11.655)	Data  0.000 ( 0.000)	Loss 0.1153 (0.1012)
+Epoch: [35][ 41/140]	Time  9.952 (11.467)	Data  0.000 ( 0.000)	Loss 0.1406 (0.0997)
+Epoch: [35][ 51/140]	Time  9.961 (11.172)	Data  0.000 ( 0.000)	Loss 0.0840 (0.0982)
+Epoch: [35][ 61/140]	Time 12.238 (11.160)	Data  0.000 ( 0.000)	Loss 0.1255 (0.0981)
+Epoch: [35][ 71/140]	Time 11.998 (11.280)	Data  0.000 ( 0.000)	Loss 0.0800 (0.0987)
+Epoch: [35][ 81/140]	Time  9.896 (11.103)	Data  0.000 ( 0.000)	Loss 0.1420 (0.0991)
+Epoch: [35][ 91/140]	Time  9.843 (10.969)	Data  0.000 ( 0.000)	Loss 0.1270 (0.0990)
+Epoch: [35][101/140]	Time 11.865 (10.993)	Data  0.000 ( 0.000)	Loss 0.0820 (0.0987)
+Epoch: [35][111/140]	Time 10.059 (11.023)	Data  0.000 ( 0.000)	Loss 0.0845 (0.0983)
+Epoch: [35][121/140]	Time  9.686 (10.921)	Data  0.000 ( 0.000)	Loss 0.1110 (0.0985)
+Epoch: [35][131/140]	Time 12.144 (10.856)	Data  0.000 ( 0.000)	Loss 0.0893 (0.0980)
+epoch: 35 train_loss: 0.098 val_loss: 0.121
+Epoch: [36][  1/140]	Time  9.988 ( 9.988)	Data  0.000 ( 0.000)	Loss 0.0753 (0.0753)
+Epoch: [36][ 11/140]	Time 10.156 ( 9.910)	Data  0.000 ( 0.000)	Loss 0.1354 (0.1001)
+Epoch: [36][ 21/140]	Time 12.024 (10.473)	Data  0.000 ( 0.000)	Loss 0.0935 (0.1016)
+Epoch: [36][ 31/140]	Time 11.540 (10.951)	Data  0.000 ( 0.000)	Loss 0.1023 (0.0999)
+Epoch: [36][ 41/140]	Time 12.079 (11.198)	Data  0.000 ( 0.000)	Loss 0.0972 (0.1005)
+Epoch: [36][ 51/140]	Time 11.981 (11.336)	Data  0.000 ( 0.000)	Loss 0.0993 (0.0988)
+Epoch: [36][ 61/140]	Time 12.275 (11.430)	Data  0.000 ( 0.000)	Loss 0.0796 (0.0974)
+Epoch: [36][ 71/140]	Time 12.013 (11.512)	Data  0.000 ( 0.000)	Loss 0.0859 (0.0980)
+Epoch: [36][ 81/140]	Time 11.761 (11.563)	Data  0.000 ( 0.000)	Loss 0.1145 (0.0975)
+Epoch: [36][ 91/140]	Time 12.067 (11.602)	Data  0.000 ( 0.000)	Loss 0.0884 (0.0977)
+Epoch: [36][101/140]	Time 11.902 (11.638)	Data  0.000 ( 0.000)	Loss 0.0995 (0.0978)
+Epoch: [36][111/140]	Time  9.708 (11.507)	Data  0.000 ( 0.000)	Loss 0.0674 (0.0973)
+Epoch: [36][121/140]	Time 11.685 (11.455)	Data  0.000 ( 0.000)	Loss 0.0935 (0.0978)
+Epoch: [36][131/140]	Time 12.047 (11.491)	Data  0.000 ( 0.000)	Loss 0.1164 (0.0978)
+epoch: 36 train_loss: 0.098 val_loss: 0.121
+Epoch: [37][  1/140]	Time 13.045 (13.045)	Data  0.000 ( 0.000)	Loss 0.0871 (0.0871)
+Epoch: [37][ 11/140]	Time 12.773 (12.624)	Data  0.000 ( 0.000)	Loss 0.0930 (0.0973)
+Epoch: [37][ 21/140]	Time 12.836 (12.685)	Data  0.000 ( 0.000)	Loss 0.0823 (0.0957)
+Epoch: [37][ 31/140]	Time 12.638 (12.703)	Data  0.000 ( 0.000)	Loss 0.0978 (0.0974)
+Epoch: [37][ 41/140]	Time 12.542 (12.705)	Data  0.000 ( 0.000)	Loss 0.0919 (0.0980)
+Epoch: [37][ 51/140]	Time 12.426 (12.700)	Data  0.000 ( 0.000)	Loss 0.0827 (0.0988)
+Epoch: [37][ 61/140]	Time 12.818 (12.702)	Data  0.000 ( 0.000)	Loss 0.0899 (0.0977)
+Epoch: [37][ 71/140]	Time 12.631 (12.685)	Data  0.000 ( 0.000)	Loss 0.1093 (0.0972)
+Epoch: [37][ 81/140]	Time 12.681 (12.681)	Data  0.000 ( 0.000)	Loss 0.1249 (0.0984)
+Epoch: [37][ 91/140]	Time 10.210 (12.452)	Data  0.000 ( 0.000)	Loss 0.0965 (0.0975)
+Epoch: [37][101/140]	Time 12.644 (12.367)	Data  0.000 ( 0.000)	Loss 0.0762 (0.0968)
+Epoch: [37][111/140]	Time 12.735 (12.392)	Data  0.000 ( 0.000)	Loss 0.0822 (0.0962)
+Epoch: [37][121/140]	Time 12.808 (12.417)	Data  0.000 ( 0.000)	Loss 0.1131 (0.0963)
+Epoch: [37][131/140]	Time 12.639 (12.440)	Data  0.000 ( 0.000)	Loss 0.0715 (0.0959)
+epoch: 37 train_loss: 0.096 val_loss: 0.120
+Epoch: [38][  1/140]	Time 12.980 (12.980)	Data  0.000 ( 0.000)	Loss 0.0976 (0.0976)
+Epoch: [38][ 11/140]	Time 12.721 (12.923)	Data  0.000 ( 0.000)	Loss 0.0984 (0.0920)
+Epoch: [38][ 21/140]	Time 10.290 (11.946)	Data  0.000 ( 0.000)	Loss 0.0893 (0.0933)
+Epoch: [38][ 31/140]	Time 12.696 (11.564)	Data  0.000 ( 0.000)	Loss 0.0907 (0.0927)
+Epoch: [38][ 41/140]	Time 10.240 (11.402)	Data  0.000 ( 0.000)	Loss 0.0876 (0.0936)
+Epoch: [38][ 51/140]	Time 10.503 (11.369)	Data  0.000 ( 0.000)	Loss 0.1169 (0.0966)
+Epoch: [38][ 61/140]	Time 10.244 (11.210)	Data  0.000 ( 0.000)	Loss 0.1434 (0.0978)
+Epoch: [38][ 71/140]	Time 10.228 (11.176)	Data  0.000 ( 0.000)	Loss 0.0674 (0.0972)
+Epoch: [38][ 81/140]	Time 12.799 (11.180)	Data  0.000 ( 0.000)	Loss 0.0884 (0.0967)
+Epoch: [38][ 91/140]	Time 12.641 (11.360)	Data  0.000 ( 0.000)	Loss 0.0937 (0.0969)
+Epoch: [38][101/140]	Time 10.479 (11.375)	Data  0.000 ( 0.000)	Loss 0.0873 (0.0967)
+Epoch: [38][111/140]	Time 10.180 (11.272)	Data  0.000 ( 0.000)	Loss 0.0780 (0.0965)
+Epoch: [38][121/140]	Time 10.219 (11.185)	Data  0.000 ( 0.000)	Loss 0.0836 (0.0961)
+Epoch: [38][131/140]	Time 10.185 (11.113)	Data  0.000 ( 0.000)	Loss 0.0882 (0.0958)
+epoch: 38 train_loss: 0.096 val_loss: 0.119
+Epoch: [39][  1/140]	Time 11.208 (11.208)	Data  0.000 ( 0.000)	Loss 0.0901 (0.0901)
+Epoch: [39][ 11/140]	Time 12.749 (11.171)	Data  0.000 ( 0.000)	Loss 0.0993 (0.1014)
+Epoch: [39][ 21/140]	Time 10.181 (11.080)	Data  0.000 ( 0.000)	Loss 0.0935 (0.1035)
+Epoch: [39][ 31/140]	Time 12.834 (10.981)	Data  0.000 ( 0.000)	Loss 0.0999 (0.1000)
+Epoch: [39][ 41/140]	Time 12.717 (11.399)	Data  0.000 ( 0.000)	Loss 0.1193 (0.0986)
+Epoch: [39][ 51/140]	Time 12.659 (11.653)	Data  0.000 ( 0.000)	Loss 0.0781 (0.0988)
+Epoch: [39][ 61/140]	Time 12.810 (11.844)	Data  0.000 ( 0.000)	Loss 0.0970 (0.0982)
+Epoch: [39][ 71/140]	Time 12.740 (11.967)	Data  0.000 ( 0.000)	Loss 0.1044 (0.0973)
+Epoch: [39][ 81/140]	Time 10.389 (11.860)	Data  0.000 ( 0.000)	Loss 0.0865 (0.0962)
+Epoch: [39][ 91/140]	Time 10.214 (11.684)	Data  0.000 ( 0.000)	Loss 0.0880 (0.0967)
+Epoch: [39][101/140]	Time 12.445 (11.764)	Data  0.000 ( 0.000)	Loss 0.0769 (0.0960)
+Epoch: [39][111/140]	Time 12.655 (11.853)	Data  0.000 ( 0.000)	Loss 0.1142 (0.0960)
+Epoch: [39][121/140]	Time 13.012 (11.931)	Data  0.000 ( 0.000)	Loss 0.0655 (0.0960)
+Epoch: [39][131/140]	Time 12.666 (12.000)	Data  0.000 ( 0.000)	Loss 0.0951 (0.0952)
+epoch: 39 train_loss: 0.095 val_loss: 0.121
+Epoch: [40][  1/140]	Time 12.085 (12.085)	Data  0.000 ( 0.000)	Loss 0.1123 (0.1123)
+Epoch: [40][ 11/140]	Time  9.991 (11.064)	Data  0.000 ( 0.000)	Loss 0.0726 (0.0887)
+Epoch: [40][ 21/140]	Time  9.785 (10.519)	Data  0.000 ( 0.000)	Loss 0.0996 (0.0900)
+Epoch: [40][ 31/140]	Time  9.875 (10.308)	Data  0.000 ( 0.000)	Loss 0.0790 (0.0906)
+Epoch: [40][ 41/140]	Time  9.877 (10.194)	Data  0.000 ( 0.000)	Loss 0.0679 (0.0928)
+Epoch: [40][ 51/140]	Time  9.831 (10.113)	Data  0.000 ( 0.000)	Loss 0.0988 (0.0945)
+Epoch: [40][ 61/140]	Time  9.692 (10.058)	Data  0.000 ( 0.000)	Loss 0.0976 (0.0944)
+Epoch: [40][ 71/140]	Time  9.721 (10.017)	Data  0.000 ( 0.000)	Loss 0.1085 (0.0947)
+Epoch: [40][ 81/140]	Time  9.944 ( 9.999)	Data  0.000 ( 0.000)	Loss 0.0791 (0.0942)
+Epoch: [40][ 91/140]	Time  9.776 ( 9.981)	Data  0.000 ( 0.000)	Loss 0.0937 (0.0937)
+Epoch: [40][101/140]	Time  9.635 ( 9.957)	Data  0.000 ( 0.000)	Loss 0.0955 (0.0934)
+Epoch: [40][111/140]	Time  9.787 ( 9.936)	Data  0.000 ( 0.000)	Loss 0.0795 (0.0935)
+Epoch: [40][121/140]	Time  9.860 ( 9.924)	Data  0.000 ( 0.000)	Loss 0.0936 (0.0934)
+Epoch: [40][131/140]	Time  9.793 ( 9.915)	Data  0.000 ( 0.000)	Loss 0.0804 (0.0930)
+epoch: 40 train_loss: 0.093 val_loss: 0.119
+Epoch: [41][  1/140]	Time 10.171 (10.171)	Data  0.000 ( 0.000)	Loss 0.1101 (0.1101)
+Epoch: [41][ 11/140]	Time  9.818 ( 9.961)	Data  0.000 ( 0.000)	Loss 0.0971 (0.0939)
+Epoch: [41][ 21/140]	Time  9.767 ( 9.920)	Data  0.000 ( 0.000)	Loss 0.0893 (0.0927)
+Epoch: [41][ 31/140]	Time 11.766 (10.310)	Data  0.000 ( 0.000)	Loss 0.0850 (0.0928)
+Epoch: [41][ 41/140]	Time 12.116 (10.717)	Data  0.000 ( 0.000)	Loss 0.0729 (0.0915)
+Epoch: [41][ 51/140]	Time 12.268 (10.975)	Data  0.000 ( 0.000)	Loss 0.0896 (0.0932)
+Epoch: [41][ 61/140]	Time 10.786 (11.121)	Data  0.000 ( 0.000)	Loss 0.0701 (0.0931)
+Epoch: [41][ 71/140]	Time 11.615 (10.973)	Data  0.000 ( 0.000)	Loss 0.0956 (0.0934)
+Epoch: [41][ 81/140]	Time 12.121 (11.099)	Data  0.000 ( 0.000)	Loss 0.1187 (0.0944)
+Epoch: [41][ 91/140]	Time 11.927 (11.187)	Data  0.000 ( 0.000)	Loss 0.0933 (0.0940)
+Epoch: [41][101/140]	Time  9.945 (11.199)	Data  0.000 ( 0.000)	Loss 0.0966 (0.0942)
+Epoch: [41][111/140]	Time 12.025 (11.097)	Data  0.000 ( 0.000)	Loss 0.0606 (0.0933)
+Epoch: [41][121/140]	Time 11.981 (11.170)	Data  0.000 ( 0.000)	Loss 0.0886 (0.0933)
+Epoch: [41][131/140]	Time 11.403 (11.227)	Data  0.000 ( 0.000)	Loss 0.0945 (0.0935)
+epoch: 41 train_loss: 0.094 val_loss: 0.120
+Epoch: [42][  1/140]	Time 11.896 (11.896)	Data  0.000 ( 0.000)	Loss 0.0999 (0.0999)
+Epoch: [42][ 11/140]	Time 11.544 (11.557)	Data  0.000 ( 0.000)	Loss 0.1134 (0.0882)
+Epoch: [42][ 21/140]	Time  9.607 (10.729)	Data  0.000 ( 0.000)	Loss 0.1095 (0.0974)
+Epoch: [42][ 31/140]	Time 10.173 (10.382)	Data  0.000 ( 0.000)	Loss 0.0790 (0.0934)
+Epoch: [42][ 41/140]	Time  9.646 (10.569)	Data  0.000 ( 0.000)	Loss 0.1227 (0.0937)
+Epoch: [42][ 51/140]	Time  9.781 (10.379)	Data  0.000 ( 0.000)	Loss 0.0933 (0.0930)
+Epoch: [42][ 61/140]	Time 11.361 (10.307)	Data  0.000 ( 0.000)	Loss 0.1488 (0.0932)
+Epoch: [42][ 71/140]	Time  9.506 (10.351)	Data  0.000 ( 0.000)	Loss 0.0877 (0.0927)
+Epoch: [42][ 81/140]	Time  9.584 (10.244)	Data  0.000 ( 0.000)	Loss 0.1011 (0.0923)
+Epoch: [42][ 91/140]	Time  9.481 (10.156)	Data  0.000 ( 0.000)	Loss 0.1426 (0.0928)
+Epoch: [42][101/140]	Time 10.977 (10.129)	Data  0.000 ( 0.000)	Loss 0.0932 (0.0922)
+Epoch: [42][111/140]	Time  9.490 (10.164)	Data  0.000 ( 0.000)	Loss 0.0964 (0.0921)
+Epoch: [42][121/140]	Time  9.451 (10.109)	Data  0.000 ( 0.000)	Loss 0.0649 (0.0916)
+Epoch: [42][131/140]	Time 10.725 (10.116)	Data  0.000 ( 0.000)	Loss 0.1130 (0.0912)
+epoch: 42 train_loss: 0.091 val_loss: 0.118
+Epoch: [43][  1/140]	Time 11.196 (11.196)	Data  0.000 ( 0.000)	Loss 0.0776 (0.0776)
+Epoch: [43][ 11/140]	Time 11.655 (11.209)	Data  0.000 ( 0.000)	Loss 0.1107 (0.0970)
+Epoch: [43][ 21/140]	Time 11.960 (11.360)	Data  0.000 ( 0.000)	Loss 0.0812 (0.0910)
+Epoch: [43][ 31/140]	Time 11.288 (11.328)	Data  0.000 ( 0.000)	Loss 0.0739 (0.0923)
+Epoch: [43][ 41/140]	Time  9.378 (11.169)	Data  0.000 ( 0.000)	Loss 0.0967 (0.0921)
+Epoch: [43][ 51/140]	Time 11.496 (11.074)	Data  0.000 ( 0.000)	Loss 0.1070 (0.0933)
+Epoch: [43][ 61/140]	Time 11.313 (11.093)	Data  0.000 ( 0.000)	Loss 0.0829 (0.0919)
+Epoch: [43][ 71/140]	Time 10.902 (11.127)	Data  0.000 ( 0.000)	Loss 0.0841 (0.0915)
+Epoch: [43][ 81/140]	Time 10.707 (11.130)	Data  0.000 ( 0.000)	Loss 0.1056 (0.0921)
+Epoch: [43][ 91/140]	Time 11.801 (11.014)	Data  0.000 ( 0.000)	Loss 0.0826 (0.0921)
+Epoch: [43][101/140]	Time 10.901 (11.035)	Data  0.000 ( 0.000)	Loss 0.0785 (0.0923)
+Epoch: [43][111/140]	Time 11.397 (11.049)	Data  0.000 ( 0.000)	Loss 0.0843 (0.0922)
+Epoch: [43][121/140]	Time 11.274 (11.067)	Data  0.000 ( 0.000)	Loss 0.0910 (0.0922)
+Epoch: [43][131/140]	Time 11.650 (10.998)	Data  0.000 ( 0.000)	Loss 0.0743 (0.0917)
+epoch: 43 train_loss: 0.091 val_loss: 0.119
+Epoch: [44][  1/140]	Time 12.436 (12.436)	Data  0.000 ( 0.000)	Loss 0.0785 (0.0785)
+Epoch: [44][ 11/140]	Time 10.029 (10.953)	Data  0.000 ( 0.000)	Loss 0.0659 (0.0841)
+Epoch: [44][ 21/140]	Time 10.007 (10.527)	Data  0.000 ( 0.000)	Loss 0.0822 (0.0871)
+Epoch: [44][ 31/140]	Time  9.767 (10.334)	Data  0.000 ( 0.000)	Loss 0.0921 (0.0887)
+Epoch: [44][ 41/140]	Time  9.951 (10.230)	Data  0.000 ( 0.000)	Loss 0.0966 (0.0900)
+Epoch: [44][ 51/140]	Time  9.756 (10.163)	Data  0.000 ( 0.000)	Loss 0.0744 (0.0884)
+Epoch: [44][ 61/140]	Time 10.061 (10.144)	Data  0.000 ( 0.000)	Loss 0.0654 (0.0885)
+Epoch: [44][ 71/140]	Time  9.943 (10.120)	Data  0.000 ( 0.000)	Loss 0.1080 (0.0886)
+Epoch: [44][ 81/140]	Time  9.791 (10.088)	Data  0.000 ( 0.000)	Loss 0.0714 (0.0904)
+Epoch: [44][ 91/140]	Time  9.726 (10.061)	Data  0.000 ( 0.000)	Loss 0.0752 (0.0900)
+Epoch: [44][101/140]	Time  9.884 (10.048)	Data  0.000 ( 0.000)	Loss 0.0836 (0.0902)
+Epoch: [44][111/140]	Time  9.780 (10.024)	Data  0.000 ( 0.000)	Loss 0.0838 (0.0906)
+Epoch: [44][121/140]	Time  9.737 (10.000)	Data  0.000 ( 0.000)	Loss 0.0979 (0.0906)
+Epoch: [44][131/140]	Time  9.779 ( 9.986)	Data  0.000 ( 0.000)	Loss 0.0701 (0.0902)
+epoch: 44 train_loss: 0.090 val_loss: 0.120
+Epoch: [45][  1/140]	Time 10.454 (10.454)	Data  0.000 ( 0.000)	Loss 0.0884 (0.0884)
+Epoch: [45][ 11/140]	Time 10.339 (10.400)	Data  0.000 ( 0.000)	Loss 0.0740 (0.0821)
+Epoch: [45][ 21/140]	Time 10.403 (10.437)	Data  0.000 ( 0.000)	Loss 0.0721 (0.0849)
+Epoch: [45][ 31/140]	Time 10.438 (10.454)	Data  0.000 ( 0.000)	Loss 0.0737 (0.0843)
+Epoch: [45][ 41/140]	Time 10.246 (10.428)	Data  0.000 ( 0.000)	Loss 0.0796 (0.0851)
+Epoch: [45][ 51/140]	Time 10.270 (10.426)	Data  0.000 ( 0.000)	Loss 0.0841 (0.0875)
+Epoch: [45][ 61/140]	Time 10.487 (10.420)	Data  0.000 ( 0.000)	Loss 0.0756 (0.0873)
+Epoch: [45][ 71/140]	Time 10.229 (10.406)	Data  0.000 ( 0.000)	Loss 0.0817 (0.0873)
+Epoch: [45][ 81/140]	Time 10.319 (10.394)	Data  0.000 ( 0.000)	Loss 0.1223 (0.0868)
+Epoch: [45][ 91/140]	Time 10.228 (10.382)	Data  0.000 ( 0.000)	Loss 0.0881 (0.0872)
+Epoch: [45][101/140]	Time 10.218 (10.375)	Data  0.000 ( 0.000)	Loss 0.0729 (0.0874)
+Epoch: [45][111/140]	Time 10.371 (10.363)	Data  0.000 ( 0.000)	Loss 0.0727 (0.0873)
+Epoch: [45][121/140]	Time 10.383 (10.359)	Data  0.000 ( 0.000)	Loss 0.1095 (0.0883)
+Epoch: [45][131/140]	Time 10.180 (10.351)	Data  0.000 ( 0.000)	Loss 0.1029 (0.0880)
+Traceback (most recent call last):
+  File "main.py", line 363, in <module>
+    main_worker(args)
+  File "main.py", line 331, in main_worker
+    avg_val_loss = validate_epoch(val_loader, model, criterion, train_list, test_list, epoch)
+  File "/home/pranoy/code/noah-research/CLIFF-pose-estimation/validate.py", line 271, in validate_epoch
+    avg_val_loss = validate(val_loader, model, criterion, epoch)
+  File "/home/pranoy/code/noah-research/CLIFF-pose-estimation/validate.py", line 84, in validate
+    for i, (batch) in enumerate(val_loader):
+  File "/home/pranoy/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/pranoy/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1186, in _next_data
+    idx, data = self._get_data()
+  File "/home/pranoy/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1142, in _get_data
+    success, data = self._try_get_data()
+  File "/home/pranoy/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 990, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/usr/lib/python3.8/queue.py", line 179, in get
+    self.not_empty.wait(remaining)
+  File "/usr/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "main.py", line 363, in <module>
+    main_worker(args)
+  File "main.py", line 331, in main_worker
+    avg_val_loss = validate_epoch(val_loader, model, criterion, train_list, test_list, epoch)
+  File "/home/pranoy/code/noah-research/CLIFF-pose-estimation/validate.py", line 271, in validate_epoch
+    avg_val_loss = validate(val_loader, model, criterion, epoch)
+  File "/home/pranoy/code/noah-research/CLIFF-pose-estimation/validate.py", line 84, in validate
+    for i, (batch) in enumerate(val_loader):
+  File "/home/pranoy/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/pranoy/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1186, in _next_data
+    idx, data = self._get_data()
+  File "/home/pranoy/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1142, in _get_data
+    success, data = self._try_get_data()
+  File "/home/pranoy/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 990, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/usr/lib/python3.8/queue.py", line 179, in get
+    self.not_empty.wait(remaining)
+  File "/usr/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

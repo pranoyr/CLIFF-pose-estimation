@@ -1,0 +1,26 @@
+{
+    "os": "Linux-5.19.0-16.2-liquorix-amd64-x86_64-with-glibc2.29",
+    "python": "3.8.10",
+    "heartbeatAt": "2022-10-26T11:23:20.150960",
+    "startedAt": "2022-10-26T11:23:19.298319",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "gpu_count": 2,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [
+        "--lr",
+        "0.00001",
+        "-b",
+        "32",
+        "--weight-decay",
+        "0"
+    ],
+    "state": "running",
+    "program": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/pranoyr/CLIFF-pose-estimation",
+        "commit": "549a11b238e0cf9843cf6e539924253752cc0f1a"
+    }
+}

@@ -84,7 +84,7 @@ from pose_2D import detect_pose
 
 
 
-device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 # print("--------------------------- Detection ---------------------------")
@@ -97,7 +97,7 @@ print("--------------------------- 3D HPS estimation ---------------------------
 cliff = eval("cliff_" + "hr48")
 cliff_model = cliff(constants.SMPL_MEAN_PARAMS).to(device)
 # Load the pretrained model
-state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
+state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt", map_location="cuda:1")['model']
 # state_dict = torch.load("checkpoint.pth")['state_dict']
 state_dict = strip_prefix_if_present(state_dict, prefix="module.")
 cliff_model.load_state_dict(state_dict, strict=True)
@@ -116,249 +116,256 @@ smpl_model = smplx.create(constants.SMPL_MODEL_DIR, "smpl").to(device)
 
 
 
-list_images = os.listdir("/home/pranoy/code/auto-transform/new_data/all_images/")
+list_images = os.listdir("/media/pranoy/Pranoy/human3.6M/images/s_06_act_13_subact_01_ca_01/")
 
-for file_name in tqdm(list_images):
-	file_name_full = os.path.join("/home/pranoy/code/auto-transform/new_data/all_images/", file_name)
-	# ret, img_bgr = vid.read()
-	img_bgr = cv2.imread(file_name_full)
-	draw_img = img_bgr.copy()
-	# img_bgr = cv2.resize(img_bgr, (512, 512))
-	
 
+for index, folder_name in enumerate(os.listdir("/media/pranoy/Pranoy/human3.6M/images/")):
+	print(folder_name)
+	print((index+1) )
+	full_folder_name = "/media/pranoy/Pranoy/human3.6M/images/" + folder_name
+	if ((index+1) % 2 == 0) and (index+1) > 200:
+		
+		for filename in tqdm(os.listdir(full_folder_name)):
+			full_file_name = full_folder_name + "/" + filename
+			# ret, img_bgr = vid.read()
+			img_bgr = cv2.imread(full_file_name)
+			draw_img = img_bgr.copy()
+			# img_bgr = cv2.resize(img_bgr, (512, 512))
+			
 
-	# norm_img = (letterbox_image(img_bgr, (416, 416)))
-	# norm_img = norm_img[:, :, ::-1].transpose((2, 0, 1)).copy()
-	# norm_img = norm_img / 255.0
 
-	# norm_img = torch.from_numpy(norm_img)
-	# norm_img = norm_img.to(device).float()
-	# norm_img = norm_img.unsqueeze(0)
+			# norm_img = (letterbox_image(img_bgr, (416, 416)))
+			# norm_img = norm_img[:, :, ::-1].transpose((2, 0, 1)).copy()
+			# norm_img = norm_img / 255.0
 
-	# dim = np.array([img_bgr.shape[1], img_bgr.shape[0]])
-	# dim = torch.from_numpy(dim)
-	# dim = dim.unsqueeze(0)
-	# dim = dim.to(device)
+			# norm_img = torch.from_numpy(norm_img)
+			# norm_img = norm_img.to(device).float()
+			# norm_img = norm_img.unsqueeze(0)
 
+			# dim = np.array([img_bgr.shape[1], img_bgr.shape[0]])
+			# dim = torch.from_numpy(dim)
+			# dim = dim.unsqueeze(0)
+			# dim = dim.to(device)
 
-	# detection_result = human_detector.detect_batch(norm_img, dim)
-	try:
-		mediapipe_results = detect_pose(img_bgr)# shape (18, 2)
-	except:
-		continue
-	scaled_keypoints = mediapipe_results["scaled_keypoints"]
-	bbox = extract_bounding_box(scaled_keypoints).to(device)
 
+			# detection_result = human_detector.detect_batch(norm_img, dim)
+			try:
+				mediapipe_results = detect_pose(img_bgr)# shape (18, 2)
+			except:
+				continue
+			scaled_keypoints = mediapipe_results["scaled_keypoints"]
+			bbox = extract_bounding_box(scaled_keypoints).to(device)
 
 
-	img_rgb = img_bgr[:, :, ::-1]
-	img_h, img_w, _ = img_rgb.shape
 
+			img_rgb = img_bgr[:, :, ::-1]
+			img_h, img_w, _ = img_rgb.shape
 
-	img_h, img_w, _ = img_bgr.shape
-	img_h = torch.tensor([img_h]).float().to(device)
-	img_w = torch.tensor([img_w]).float().to(device)
 
-	focal_length = estimate_focal_length(img_h, img_w)
-	# bbox = detection_result[0][1:5]
+			img_h, img_w, _ = img_bgr.shape
+			img_h = torch.tensor([img_h]).float().to(device)
+			img_w = torch.tensor([img_w]).float().to(device)
 
+			focal_length = estimate_focal_length(img_h, img_w)
+			# bbox = detection_result[0][1:5]
 
 
-	norm_img, center, scale, crop_ul, crop_br, _ = process_image(img_rgb, bbox)
 
-	
-	center = center.unsqueeze(0).to(device)
-	scale = scale.unsqueeze(0)
-	focal_length = torch.tensor([focal_length]).to(device)
+			norm_img, center, scale, crop_ul, crop_br, _ = process_image(img_rgb, bbox)
 
+			
+			center = center.unsqueeze(0).to(device)
+			scale = scale.unsqueeze(0)
+			focal_length = torch.tensor([focal_length]).to(device)
 
 
 
 
 
 
-	pred_vert_arr = []
-	cx, cy, b = center[:, 0], center[:, 1], scale * 200
 
+			pred_vert_arr = []
+			cx, cy, b = center[:, 0], center[:, 1], scale * 200
 
-	
-	bbox_info = torch.stack([cx - img_w / 2., cy - img_h / 2., b], dim=-1)
-	# The constants below are used for normalization, and calculated from H36M data.
-	# It should be fine if you use the plain Equation (5) in the paper.
-	bbox_info[:, :2] = bbox_info[:, :2] / focal_length.unsqueeze(-1) * 2.8  # [-1, 1]
-	bbox_info[:, 2] = (bbox_info[:, 2] - 0.24 * focal_length) / (0.06 * focal_length)  # [-1, 1]
 
+			
+			bbox_info = torch.stack([cx - img_w / 2., cy - img_h / 2., b], dim=-1)
+			# The constants below are used for normalization, and calculated from H36M data.
+			# It should be fine if you use the plain Equation (5) in the paper.
+			bbox_info[:, :2] = bbox_info[:, :2] / focal_length.unsqueeze(-1) * 2.8  # [-1, 1]
+			bbox_info[:, 2] = (bbox_info[:, 2] - 0.24 * focal_length) / (0.06 * focal_length)  # [-1, 1]
 
-	norm_img = torch.from_numpy(norm_img).unsqueeze(0)
-	norm_img = norm_img.to(device)
 
+			norm_img = torch.from_numpy(norm_img).unsqueeze(0)
+			norm_img = norm_img.to(device)
 
-	with torch.no_grad():
-		pred_rotmat, pred_betas, pred_cam_crop = cliff_model(norm_img, bbox_info)
 
-	
+			with torch.no_grad():
+				pred_rotmat, pred_betas, pred_cam_crop = cliff_model(norm_img, bbox_info)
 
-	# convert the camera parameters from the crop camera to the full camera
+			
 
-	# full_img_shape = torch.tensor([[img_h, img_w]]).float().to(device)
-	full_img_shape = torch.stack((img_h, img_w), dim=-1)
+			# convert the camera parameters from the crop camera to the full camera
 
-	# full_img_shape = torch.stack((img_h, img_w), dim=-1)
-	pred_cam_full = cam_crop2full(pred_cam_crop, center, scale, full_img_shape, focal_length)
+			# full_img_shape = torch.tensor([[img_h, img_w]]).float().to(device)
+			full_img_shape = torch.stack((img_h, img_w), dim=-1)
 
+			# full_img_shape = torch.stack((img_h, img_w), dim=-1)
+			pred_cam_full = cam_crop2full(pred_cam_crop, center, scale, full_img_shape, focal_length)
 
 
-	# print("betas", pred_betas.shape)
-	# print("body pose", pred_rotmat[:, 1:].shape)
-	# print("global_orient", pred_rotmat[:, [0]].shape)
-	# pred_output = smpl_model(betas=pred_betas,
-	# 							body_pose=pred_rotmat[:, 1:],
-	# 							global_orient=pred_rotmat[:, [0]],
-	# 							pose2rot=False,
-	# 							transl=pred_cam_full)
 
-	
+			# print("betas", pred_betas.shape)
+			# print("body pose", pred_rotmat[:, 1:].shape)
+			# print("global_orient", pred_rotmat[:, [0]].shape)
+			# pred_output = smpl_model(betas=pred_betas,
+			# 							body_pose=pred_rotmat[:, 1:],
+			# 							global_orient=pred_rotmat[:, [0]],
+			# 							pose2rot=False,
+			# 							transl=pred_cam_full)
 
+			
 
 
-	#save to pickle
-	results = {}
-	results["beta"] = pred_betas.cpu().squeeze(0).numpy()
-	results["body_pose"] = pred_rotmat[:, 1:].cpu().squeeze(0).numpy()
-	pickle.dump(results, open("/home/pranoy/code/auto-transform/new_data/smpl_params/" + file_name + ".pkl", "wb"))
 
-	# vertices = pred_output.vertices
-	# faces = smpl_model.faces
-	# joints = pred_output.joints
+			#save to pickle
+			results = {}
+			results["beta"] = pred_betas.cpu().squeeze(0).numpy()
+			results["body_pose"] = pred_rotmat[:, 1:].cpu().squeeze(0).numpy()
+			pickle.dump(results, open("/media/pranoy/Pranoy/human3.6M/smpl_params/" + filename[:-4] + ".pkl", "wb"))
 
+			# vertices = pred_output.vertices
+			# faces = smpl_model.faces
+			# joints = pred_output.joints
 
-	# pred_vert_arr.extend(pred_vertices.cpu().numpy())
-	# pred_vert_arr = np.array(pred_vert_arr)
-	# for img_idx, orig_img_bgr in enumerate(tqdm(orig_img_bgr_all)):
-	#     chosen_mask = detection_all[:, 0] == img_idx
-	#     chosen_vert_arr = pred_vert_arr[chosen_mask]
 
-	# setup renderer for visualization
-	# img_h, img_w, _ = img_bgr.shape
-	# img_h = torch.tensor([img_h]).float().to(device)
-	# img_w = torch.tensor([img_w]).float().to(device)
+			# pred_vert_arr.extend(pred_vertices.cpu().numpy())
+			# pred_vert_arr = np.array(pred_vert_arr)
+			# for img_idx, orig_img_bgr in enumerate(tqdm(orig_img_bgr_all)):
+			#     chosen_mask = detection_all[:, 0] == img_idx
+			#     chosen_vert_arr = pred_vert_arr[chosen_mask]
 
-	
-#	focal_length = estimate_focal_length(img_h, img_w)
-	# renderer = Renderer(focal_length=focal_length, img_w=img_w, img_h=img_h,
-	#                     faces=smpl_model.faces,
-	#                     same_mesh_color=("video" == "video"))
+			# setup renderer for visualization
+			# img_h, img_w, _ = img_bgr.shape
+			# img_h = torch.tensor([img_h]).float().to(device)
+			# img_w = torch.tensor([img_w]).float().to(device)
 
+			
+		#	focal_length = estimate_focal_length(img_h, img_w)
+			# renderer = Renderer(focal_length=focal_length, img_w=img_w, img_h=img_h,
+			#                     faces=smpl_model.faces,
+			#                     same_mesh_color=("video" == "video"))
 
 
-	# joints = joints + pred_cam_full
-	# pred_keypoints_2d = to_camera(joints)
 
-	
+			# joints = joints + pred_cam_full
+			# pred_keypoints_2d = to_camera(joints)
 
-	# camera_center = torch.zeros(1, 2, device="cuda:1")
-	# pred_keypoints_2d = perspective_projection(joints,
-	# 			rotation=torch.eye(3, device="cuda:1").unsqueeze(0).expand(1, -1, -1),
-	# 			translation=pred_cam_full,
-	# 			focal_length=focal_length,
-	# 			camera_center=torch.div(full_img_shape, 2, rounding_mode='floor'))
+			
 
+			# camera_center = torch.zeros(1, 2, device="cuda:1")
+			# pred_keypoints_2d = perspective_projection(joints,
+			# 			rotation=torch.eye(3, device="cuda:1").unsqueeze(0).expand(1, -1, -1),
+			# 			translation=pred_cam_full,
+			# 			focal_length=focal_length,
+			# 			camera_center=torch.div(full_img_shape, 2, rounding_mode='floor'))
 
 
 
-	# # print(pred_keypoints_2d.shape)
-	# # pred_keypoints_2d = to_image(pred_keypoints_2d, focal=focal_length, center=cx)
-	# # print(pred_keypoints_2d/ full_img_shape)
 
+			# # print(pred_keypoints_2d.shape)
+			# # pred_keypoints_2d = to_image(pred_keypoints_2d, focal=focal_length, center=cx)
+			# # print(pred_keypoints_2d/ full_img_shape)
 
-	# landmarks = get_landmarks(pred_keypoints_2d).squeeze() 
 
+			# landmarks = get_landmarks(pred_keypoints_2d).squeeze() 
 
-	# # img1 = np.ones((img_h,img_w,3), dtype=np.uint8) * 255
-	
 
+			# # img1 = np.ones((img_h,img_w,3), dtype=np.uint8) * 255
+			
 
-	
-	# # textures = torch.ones_like(vertices)# (1, V, 3)
-	# # textures = TexturesVertex(verts_features=textures)
-	
-	# # vertices = vertices[0]
-	# # faces = faces.astype(np.float32)
-	# # faces = torch.from_numpy(faces)
 
-	# # print(vertices.shape)
-	# # print(faces.shape)
-	
-	# # mesh = Meshes(
-	# # 	verts=[vertices.to(device)],   
-	# # 	faces=[faces.to(device)],
-	# # 	textures=textures)
-	# # images = renderer(mesh, lights=lights, cameras=cameras)
-	# # rgb = images[0, ..., :3].detach().cpu().numpy() 
-	# # bgr = rgb[..., ::-1]
-	# # cv2.imshow('image', bgr)
-	# # cv2.waitKey(1)
+			
+			# # textures = torch.ones_like(vertices)# (1, V, 3)
+			# # textures = TexturesVertex(verts_features=textures)
+			
+			# # vertices = vertices[0]
+			# # faces = faces.astype(np.float32)
+			# # faces = torch.from_numpy(faces)
 
-	# renderer = Renderer(focal_length=focal_length, img_w=img_w, img_h=img_h,
-	# 						faces=smpl_model.faces,
-	# 						same_mesh_color=("video" == "video"))
-	
-	# front_view = renderer.render_front_view(vertices.cpu(), img_bgr)
+			# # print(vertices.shape)
+			# # print(faces.shape)
+			
+			# # mesh = Meshes(
+			# # 	verts=[vertices.to(device)],   
+			# # 	faces=[faces.to(device)],
+			# # 	textures=textures)
+			# # images = renderer(mesh, lights=lights, cameras=cameras)
+			# # rgb = images[0, ..., :3].detach().cpu().numpy() 
+			# # bgr = rgb[..., ::-1]
+			# # cv2.imshow('image', bgr)
+			# # cv2.waitKey(1)
 
-	# front_view = cv2.resize(front_view, (640, 480))
-	# cv2.imshow('image', front_view)
+			# renderer = Renderer(focal_length=focal_length, img_w=img_w, img_h=img_h,
+			# 						faces=smpl_model.faces,
+			# 						same_mesh_color=("video" == "video"))
+			
+			# front_view = renderer.render_front_view(vertices.cpu(), img_bgr)
 
+			# front_view = cv2.resize(front_view, (640, 480))
+			# cv2.imshow('image', front_view)
 
 
-	
 
+			
 
-	# # poses, _ = detect_pose(draw_img)
-	# # print(poses.shape)
 
-	# smplx_left_leg_indices = torch.tensor([2,5,8,11])
-	# smplx_right_leg_indices = torch.tensor([1,4,7,10])
-	# smplx_left_arm_indices = torch.tensor([17,19,21,23])
-	# smplx_right_arm_indices = torch.tensor([16,18,20,22])
-	# nose_neck_indices = torch.tensor([15])
+			# # poses, _ = detect_pose(draw_img)
+			# # print(poses.shape)
 
-	# mediapipe_left_leg_indices = torch.tensor([24,26,28,32])
-	# mediapipe_right_leg_indices = torch.tensor([23,25,27,31])
-	# mediapipe_left_arm_indices = torch.tensor([12,14,16,20])
-	# mediapipe_right_arm_indices = torch.tensor([11,13,15,19])
-	# mediapipe_nose_neck_indices = torch.tensor([0])
+			# smplx_left_leg_indices = torch.tensor([2,5,8,11])
+			# smplx_right_leg_indices = torch.tensor([1,4,7,10])
+			# smplx_left_arm_indices = torch.tensor([17,19,21,23])
+			# smplx_right_arm_indices = torch.tensor([16,18,20,22])
+			# nose_neck_indices = torch.tensor([15])
 
+			# mediapipe_left_leg_indices = torch.tensor([24,26,28,32])
+			# mediapipe_right_leg_indices = torch.tensor([23,25,27,31])
+			# mediapipe_left_arm_indices = torch.tensor([12,14,16,20])
+			# mediapipe_right_arm_indices = torch.tensor([11,13,15,19])
+			# mediapipe_nose_neck_indices = torch.tensor([0])
 
-	# landmarks  = landmarks[smplx_left_leg_indices]
 
-	# for i in range(landmarks.shape[0]):
-	# 	x, y = landmarks[i]
-	# 	#cv2.circle(front_view, (int(x), int(y)), 2, (0, 0, 255), -1)
-	# 	cv2.putText(front_view, str(i), (int(x), int(y)), 0, 0.5, 255)
-	# 	#time.sleep(0.5)
+			# landmarks  = landmarks[smplx_left_leg_indices]
 
-	# cv2.imshow("predicted.png", front_view)
+			# for i in range(landmarks.shape[0]):
+			# 	x, y = landmarks[i]
+			# 	#cv2.circle(front_view, (int(x), int(y)), 2, (0, 0, 255), -1)
+			# 	cv2.putText(front_view, str(i), (int(x), int(y)), 0, 0.5, 255)
+			# 	#time.sleep(0.5)
 
-	# cv2.waitKey(1)
-	
+			# cv2.imshow("predicted.png", front_view)
 
-	# poses= poses[mediapipe_nose_neck_indices]
+			# cv2.waitKey(1)
+			
 
-	# # visualise media pipe landmarks
-	# for i in range(poses.shape[0]):
-	# 	x, y = poses[i]
-	# 	#cv2.circle(front_view, (int(x), int(y)), 2, (0, 0, 255), -1)
-	# 	cv2.putText(draw_img, str(i), (int(x), int(y)), 0, 0.5, 255)
-	# 	#time.sleep(0.5)
+			# poses= poses[mediapipe_nose_neck_indices]
 
-	# cv2.imshow("mediapipe", draw_img)
-	# cv2.waitKey(1)
+			# # visualise media pipe landmarks
+			# for i in range(poses.shape[0]):
+			# 	x, y = poses[i]
+			# 	#cv2.circle(front_view, (int(x), int(y)), 2, (0, 0, 255), -1)
+			# 	cv2.putText(draw_img, str(i), (int(x), int(y)), 0, 0.5, 255)
+			# 	#time.sleep(0.5)
 
-	# del renderer
+			# cv2.imshow("mediapipe", draw_img)
+			# cv2.waitKey(1)
 
+			# del renderer
 
 
- 
-	
-	
+
+		
+			
+			
 

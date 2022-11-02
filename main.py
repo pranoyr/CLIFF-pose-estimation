@@ -1,10 +1,14 @@
 import argparse
+from logging import root
 import os
 import random
 import shutil
 import time
 import warnings
 from enum import Enum
+
+import numpy as np
+from sklearn.model_selection import train_test_split
 
 
 import torch
@@ -23,8 +27,10 @@ import torchvision.transforms as transforms
 import torchvision.models as models
 from torch.utils.data import Subset
 from train import train_epoch
+from validate import validate_epoch
 import dataset
 
+import glob
 
 from common.renderer_pyrd import Renderer
 from common.mocap_dataset import MocapDataset
@@ -93,12 +99,22 @@ parser.add_argument('--dummy', action='store_true', help="use fake data to bench
 best_acc1 = 0
 
 
+import wandb
+
+# 1. Start a W&B run
+wandb.init(project="cliff")
+
 def save_checkpoint(state, is_best, filename='checkpoint.pth'):
 	# torch.save(state, filename)
 	if is_best:
 		# shutil.copyfile(filename, 'model_best.pth.tar')
 		torch.save(state, filename)
 
+def get_data(data_path):
+		data = []
+		for img_path in glob.glob(data_path + os.sep + '*'):
+			data.append(img_path)
+		return data
 
 
 def main():
@@ -165,7 +181,7 @@ def main_worker(args):
 	# state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
 	# state_dict = torch.load("checkpoint.pth", map_location="cuda")['state_dict']
 	# model.load_state_dict(state_dict, strict=True)
-	model.eval()
+	# model.eval()
 
 	# Create the model instance
 	# cliff = eval("cliff_" + "res50")
@@ -219,7 +235,7 @@ def main_worker(args):
 	# optimizer = torch.optim.SGD(model.parameters(), args.lr,
 	# 							momentum=args.momentum,
 	# 							weight_decay=args.weight_decay)
-	optimizer = torch.optim.Adam(model.parameters(), args.lr)
+	optimizer = torch.optim.Adam(model.parameters(), args.lr, weight_decay=args.weight_decay)
 
 	#torch.optim.LBFGS(model.parameters(), lr=args.lr, max_iter=1000)
 	
@@ -245,6 +261,7 @@ def main_worker(args):
 		model.load_state_dict(checkpoint['state_dict'])
 		optimizer.load_state_dict(checkpoint['optimizer'])
 		scheduler.load_state_dict(checkpoint['scheduler'])
+		args.start_epoch = checkpoint['epoch']
 	# 	print("=> loaded checkpoint '{}' (epoch {})"
 		# 		  .format(args.resume, checkpoint['epoch']))
 		# else:
@@ -254,12 +271,23 @@ def main_worker(args):
 
 
 	# traindir = "/media/pranoy/Pranoy/coco/smpl_params/"
-	traindir = "/home/pranoy/code/auto-transform/new_data/smpl_params/"
+	# traindir = "/home/pranoy/code/auto-transform/new_data/smpl_params/"
+	# traindir = "/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/smpl_params"
+	root_dir = "/media/pranoy/Pranoy/human3.6M/"
+	train_list = "z.txt"
 	# valdir = os.path.join(args.data, 'val')
 	# normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
 	# 								std=[0.229, 0.224, 0.225])
 
-	train_dataset = dataset.CustomDataset(traindir)
+	# imgs_data  = get_data(train_list)
+	# imgs_data = np.array(imgs_data)
+
+	# train_list ,test_list = train_test_split(imgs_data,test_size=0.3)      
+
+	# print(test_list)
+
+	train_dataset = dataset.CustomDataset(root_dir, train_list, image_set="train")
+	# val_dataset = dataset.CustomDataset(train_list, image_set="val")
 
 	# val_dataset = datasets.ImageFolder(
 	# 	valdir,
@@ -277,13 +305,18 @@ def main_worker(args):
 	# 	train_sampler = None
 	# 	val_sampler = None
 
+
+	# print("train_list",len(train_list))
+	# print("test_list",len(test_list))
+
+
 	train_loader = torch.utils.data.DataLoader(
 		train_dataset, batch_size=args.batch_size, shuffle=True,
 		num_workers=0, pin_memory=True)
 
 	# val_loader = torch.utils.data.DataLoader(
 	# 	val_dataset, batch_size=args.batch_size, shuffle=False,
-	# 	num_workers=args.workers, pin_memory=True, sampler=val_sampler)
+	# 	num_workers=args.workers, pin_memory=True)
 
 	# if args.evaluate:
 	# 	validate(val_loader, model, criterion, args)
@@ -294,18 +327,28 @@ def main_worker(args):
 		# 	train_sampler.set_epoch(epoch)
 
 		# train for one epoch
-		loss = train_epoch(train_loader, model, criterion, optimizer, epoch, args)
+		avg_train_loss  = train_epoch(train_loader, model, criterion, optimizer, epoch, args)
 
-		# # evaluate on validation set
-		# acc1 = validate(val_loader, model, criterion, args)
-		
-		scheduler.step()
+	
+		# # # evaluate on validation set
+		# avg_val_loss = validate_epoch(val_loader, model, criterion, train_list, test_list, epoch)
+
+
+		# scheduler.step()
+
+		# #print losses
+		print("epoch:",epoch, f"train_loss: {avg_train_loss:.3f}")
+		wandb.log({"train_loss": avg_train_loss})
+
+
+		# print("epoch:",epoch, f"train_loss: {avg_train_loss:.3f}", f"val_loss: {avg_val_loss:.3f}")
+		# wandb.log({"train_loss": avg_train_loss, "val_loss": avg_val_loss})
 
 		
 		# remember best acc@1 and save checkpoint
 	
-		is_best = loss < th
-		th = min(th,loss)
+		# is_best = avg_val_loss < th
+		# th = min(th,avg_val_loss)
 		is_best = True
 
 

@@ -58,6 +58,9 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 		img_h = batch["img_h"].to(device).float()
 		img_w = batch["img_w"].to(device).float()
 		focal_length = batch["focal_length"].to(device).float()
+		has_smplx = batch["has_smplx"].to(device).float()
+
+		print(has_smplx) 
 	
 
 		# print("norm_img.shape", norm_img.shape)
@@ -137,12 +140,12 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 		pose_loss = criterion(pred_rotmat[:, 1:], batch["pose_params"].to(device).float())
 
 
-		loss = keypoint_loss * 5   + \
+		loss = keypoint_loss    + \
 		  		beta_loss * 0.001 + \
-		 		pose_loss   
-				# ((torch.exp(-pred_cam_crop[:,0]*10)) ** 2 ).mean()
+		 		pose_loss   + \
+				((torch.exp(-pred_cam_crop[:,0]*10)) ** 2 ).mean()
 				
-		# loss *= 60
+		loss *= 60
 
 		# landmarks = batch["target_landmarks"].squeeze(0).cpu().numpy() * np.array([img_w, img_h])
 		# # print(landmarks)
@@ -209,10 +212,5 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 			# bgr = rgb[..., ::-1]
 			# cv2.imshow('image', bgr)
 			# cv2.waitKey(1)
-
-	model.eval()
-	img = cv2.imread("/home/pranoy/code/auto-transform/new_data/all_images/image89.jpg")
-	validate_epoch(model, img)
-	
 
 	return losses.avg

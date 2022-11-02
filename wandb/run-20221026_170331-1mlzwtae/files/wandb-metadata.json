@@ -1,0 +1,29 @@
+{
+    "os": "Linux-5.19.0-16.2-liquorix-amd64-x86_64-with-glibc2.29",
+    "python": "3.8.10",
+    "heartbeatAt": "2022-10-26T11:33:32.671073",
+    "startedAt": "2022-10-26T11:33:31.850882",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "gpu_count": 2,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [
+        "--lr",
+        "0.0001",
+        "-b",
+        "32"
+    ],
+    "state": "running",
+    "program": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/pranoyr/CLIFF-pose-estimation",
+        "commit": "549a11b238e0cf9843cf6e539924253752cc0f1a"
+    },
+    "email": "pranoy@firstsense.tech",
+    "root": "/home/pranoy/code/noah-research/CLIFF-pose-estimation",
+    "host": "FS-Classroom-001",
+    "username": "pranoy",
+    "executable": "/usr/bin/python"
+}
