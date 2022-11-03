@@ -241,7 +241,8 @@ def main_worker(args):
 	cudnn.benchmark = True
 
 
-	traindir = "/media/pranoy/Pranoy/coco/smpl_params/"
+	# traindir = "/media/pranoy/Pranoy/coco/smpl_params/"
+	traindir = "/media/pranoy/Pranoy/human3.6M/smpl_params"
 	# valdir = os.path.join(args.data, 'val')
 	# normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
 	# 								std=[0.229, 0.224, 0.225])
