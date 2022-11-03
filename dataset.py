@@ -90,6 +90,7 @@ class CustomDataset(Dataset):
 		# read images in grayscale, then invert them
 		# img  = cv2.imread(self.image_list[index].replace("smpl_params", "train2017")[:-4])
 		full_lath = self.root_dir + "images/" + self.image_list[index][:-11] + "/" + self.image_list[index].replace("pkl", "jpg")
+		print("******")
 		print(full_lath)
 		img  = cv2.imread(full_lath)
 		img_h, img_w, _ = img.shape
