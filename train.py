@@ -60,7 +60,7 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 		focal_length = batch["focal_length"].to(device).float()
 		has_smplx = batch["has_smplx"].to(device).float()
 
-		print(has_smplx) 
+		# print(has_smplx) 
 	
 
 		# print("norm_img.shape", norm_img.shape)
