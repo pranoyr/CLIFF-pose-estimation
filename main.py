@@ -98,10 +98,10 @@ parser.add_argument('--dummy', action='store_true', help="use fake data to bench
 best_acc1 = 0
 
 
-import wandb
+# import wandb
 
-# 1. Start a W&B run
-wandb.init(project="cliff")
+# # 1. Start a W&B run
+# wandb.init(project="cliff")
 
 def save_checkpoint(state, is_best, filename='checkpoint.pth'):
 	# torch.save(state, filename)
@@ -336,7 +336,7 @@ def main_worker(args):
 
 		# #print losses
 		print("epoch:",epoch, f"train_loss: {avg_train_loss:.3f}")
-		wandb.log({"train_loss": avg_train_loss})
+		# wandb.log({"train_loss": avg_train_loss})
 
 
 		# print("epoch:",epoch, f"train_loss: {avg_train_loss:.3f}", f"val_loss: {avg_val_loss:.3f}")

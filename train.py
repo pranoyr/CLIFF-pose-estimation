@@ -34,6 +34,12 @@ import smplx
 from common import constants
 
 
+import wandb
+
+# 1. Start a W&B run
+wandb.init(project="cliff")
+
+
 smpl_model = smplx.create(constants.SMPL_MODEL_DIR, "smpl").to(device)
 
 def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
@@ -195,6 +201,7 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 		end = time.time()
 
 		if i % args.print_freq == 0:
+			wandb.log({"train_loss": losses.avg})
 			progress.display(i + 1)
 	
 
