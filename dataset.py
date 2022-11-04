@@ -106,6 +106,7 @@ class CustomDataset(Dataset):
 				pose_params = data['body_pose']
 				beta_params = data['beta']
 				has_smplx  = 1
+				print(beta_params.shape)
 		else:
 			pose_params = np.zeros((23,3,3))
 			beta_params = np.zeros((10))
