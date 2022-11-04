@@ -99,7 +99,7 @@ class CustomDataset(Dataset):
 		
 		has_smplx  = 0
 		# load from pickle file:
-		pose_full_lath = self.root_dir + "smpl_params/" + self.image_list[index][:-4] + ".pkl"
+		pose_full_lath = self.root_dir + "/smpl_params/" + self.image_list[index][:-4] + ".pkl"
 		print(pose_full_lath)
 		if os.path.exists(pose_full_lath):
 			with open(pose_full_lath, 'rb') as f:
