@@ -100,14 +100,14 @@ class CustomDataset(Dataset):
 		has_smplx  = 0
 		# load from pickle file:
 		pose_full_lath = self.root_dir + "/smpl_params/" + self.image_list[index][:-4] + ".pkl"
-		print(pose_full_lath)
+		#print(pose_full_lath)
 		if os.path.exists(pose_full_lath):
 			with open(pose_full_lath, 'rb') as f:
 				data = pk.load(f)
 				pose_params = data['body_pose']
 				beta_params = data['beta']
 				has_smplx  = 1
-				print(beta_params.shape)
+				#print(beta_params.shape)
 		else:
 			pose_params = np.zeros((23,3,3))
 			beta_params = np.zeros((10))
