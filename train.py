@@ -148,8 +148,8 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 
 		loss = keypoint_loss    + \
 		  		beta_loss * 0.001 + \
-		 		pose_loss   + \
-				((torch.exp(-pred_cam_crop[:,0]*10)) ** 2 ).mean()
+		 		pose_loss   
+				#((torch.exp(-pred_cam_crop[:,0]*10)) ** 2 ).mean()
 				
 		loss *= 60
 
