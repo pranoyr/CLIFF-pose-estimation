@@ -150,6 +150,7 @@ def main():
 		# Simply call main_worker function
 		main_worker(args.gpu, ngpus_per_node, args)
 
+device = torch.device("cuda:1")
 
 # def main_worker(gpu, ngpus_per_node, args):
 def main_worker(args):
@@ -229,7 +230,7 @@ def main_worker(args):
 	# args.ngpus_per_node = ngpus_per_node
 
 	# define loss function (criterion), optimizer, and learning rate scheduler
-	criterion = nn.MSELoss().cuda(args.gpu)
+	criterion = nn.MSELoss().to(device)
 
 	# optimizer = torch.optim.SGD(model.parameters(), args.lr,
 	# 							momentum=args.momentum,
@@ -352,13 +353,7 @@ def main_worker(args):
 
 		# if not args.multiprocessing_distributed or (args.multiprocessing_distributed
 		# 		and args.rank % ngpus_per_node == 0):
-		save_checkpoint({
-			'epoch': epoch + 1,
-			'arch': args.arch,
-			'state_dict': model.state_dict(),
-			'optimizer' : optimizer.state_dict(),
-			'scheduler' : scheduler.state_dict()
-		}, is_best)
+
 
 
 

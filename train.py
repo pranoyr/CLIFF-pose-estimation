@@ -10,6 +10,7 @@ from utils import *
 from validate import validate_epoch
 
 from pose_2D import detect_pose
+from validate import visualise
 
 import torch
 import torch.nn as nn
@@ -38,6 +39,14 @@ import wandb
 
 # 1. Start a W&B run
 wandb.init(project="cliff")
+
+
+def save_checkpoint(state, is_best, filename='checkpoint.pth'):
+	# torch.save(state, filename)
+	if is_best:
+		# shutil.copyfile(filename, 'model_best.pth.tar')
+		torch.save(state, filename)
+
 
 
 smpl_model = smplx.create(constants.SMPL_MODEL_DIR, "smpl").to(device)
@@ -203,6 +212,16 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 		if i % args.print_freq == 0:
 			wandb.log({"train_loss": losses.avg})
 			progress.display(i + 1)
+
+			train_img = cv2.imread("images/frame_000344.jpg")
+			visualise(train_img, model, output_path="val.jpg")
+			save_checkpoint({
+			'epoch': epoch + 1,
+			'arch': args.arch,
+			'state_dict': model.state_dict(),
+			'optimizer' : optimizer.state_dict(),
+			# 'scheduler' : scheduler.state_dict()
+				}, True)
 	
 
 			# full_pose_coeff = model(keypoints)
