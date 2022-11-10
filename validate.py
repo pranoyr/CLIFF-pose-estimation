@@ -11,9 +11,9 @@ import os
 import math
 import time
 from common.renderer_pyrd import Renderer
-from render import *
+# from render import *
 # from lib.pytorch_yolo_v3_master.preprocess import letterbox_image
-from pytorch3d.structures import Meshes
+# from pytorch3d.structures import Meshes
 import random
 import os.path as osp
 import cv2
@@ -60,7 +60,7 @@ def extract_bounding_box(points):
 
 
 
-device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 smpl_model = smplx.create(constants.SMPL_MODEL_DIR, "smpl").to(device)
@@ -117,7 +117,7 @@ def validate(val_loader, model, criterion, epoch):
 
 
 		projected_keypoints_2d = perspective_projection(pred_joints,
-				rotation=torch.eye(3, device="cuda:1").unsqueeze(0).expand(1, -1, -1),
+				rotation=torch.eye(3, device="cuda:0").unsqueeze(0).expand(1, -1, -1),
 				translation=pred_cam_full,
 				focal_length=focal_length,
 				camera_center=torch.div(full_img_shape.flip(dims=[1]), 2, rounding_mode='floor'))
@@ -241,9 +241,9 @@ def visualise(img_bgr, cliff_model, output_path):
 
 
 
-	camera_center = torch.zeros(1, 2, device="cuda:1")
+	camera_center = torch.zeros(1, 2, device="cuda:0")
 	pred_keypoints_2d = perspective_projection(joints,
-				rotation=torch.eye(3, device="cuda:1").unsqueeze(0).expand(1, -1, -1),
+				rotation=torch.eye(3, device="cuda:0").unsqueeze(0).expand(1, -1, -1),
 				translation=pred_cam_full,
 				focal_length=focal_length,
 				camera_center=torch.tensor([torch.div(img_w, 2, rounding_mode='floor'), 

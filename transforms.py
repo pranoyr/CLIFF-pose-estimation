@@ -9,11 +9,10 @@
 
 import os
 import math
-from random import random
 import time
 from common.renderer_pyrd import Renderer
-from render import *
-from pytorch3d.structures import Meshes
+# from render import *
+# from pytorch3d.structures import Meshes
 import pickle
 import os.path as osp
 import cv2
@@ -29,7 +28,7 @@ import torchgeometry as tgm
 
 from models.cliff_hr48.cliff import CLIFF as cliff_hr48
 from models.cliff_res50.cliff import CLIFF as cliff_res50
-from common import constants
+from common import constants_1
 from common.utils import strip_prefix_if_present, cam_crop2full, video_to_images
 from common.utils import estimate_focal_length
 from common.renderer_pyrd import Renderer
@@ -61,7 +60,7 @@ from pose_2D import detect_pose
 #         static_image_mode=True,
 #         refine_face_landmarks=True,
 #         min_tracking_confidence=0.5) as holistic:
-        
+		
 #         poses = []
 
 #         # To improve performance, optionally mark the image as not writeable to
@@ -93,11 +92,11 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 print("--------------------------- 3D HPS estimation ---------------------------")
 # Create the model instance
-cliff = eval("cliff_" + "res50")
-cliff_model = cliff(constants.SMPL_MEAN_PARAMS).to(device)
+cliff = eval("cliff_" + "hr48")
+cliff_model = cliff(constants_1.SMPL_MEAN_PARAMS).to(device)
 # Load the pretrained model
-# state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
-state_dict = torch.load("checkpoint.pth", map_location="cuda:0")['state_dict']
+state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
+# state_dict = torch.load("checkpoint.pth", map_location="cuda")['state_dict']
 state_dict = strip_prefix_if_present(state_dict, prefix="module.")
 cliff_model.load_state_dict(state_dict, strict=True)
 cliff_model.eval()
@@ -112,20 +111,67 @@ def extract_bounding_box(points):
 vid = cv2.VideoCapture(0)
 
 # Setup the SMPL model
-smpl_model = smplx.create(constants.SMPL_MODEL_DIR, "smpl").to(device)
+smpl_model = smplx.create(constants_1.SMPL_MODEL_DIR, "smpl").to(device)
 
-path = "/home/pranoy/code/auto-transform/new_data/all_images/"
-files = os.listdir(path)
+# rot_factor', type=float, default=30, help='Random rotation in the range [-rot_factor, rot_factor]') 
+# train.add_argument('--noise_factor', type=float, default=0.4, help='Randomly multiply pixel values with factor in the range [1-noise_factor, 1+noise_factor]') 
+# train.add_argument('--scale_factor', type=float, default=0.25, help='Rescale bounding boxes by a factor of [1-scale_factor,1+scale_factor]') 
+rot_factor = 30
+noise_factor = 0.4
+scale_factor = 0.25
 
-c = 0
+from utils.imutils import crop, flip_img, flip_pose, flip_kp, transform, rot_aa
+
+def pose_processing(self, pose, r, f):
+        """Process SMPL theta parameters  and apply all augmentation transforms."""
+        # rotation or the pose parameters
+        pose[:3] = rot_aa(pose[:3], r)
+        # flip the pose parameters
+        if f:
+            pose = flip_pose(pose)
+        # (72),float
+        pose = pose.astype('float32')
+        return pose
+
+
+def augm_params():
+	"""Get augmentation parameters."""
+	flip = 0            # flipping
+	pn = np.ones(3)  # per channel pixel-noise
+	rot = 0            # rotation
+	sc = 1            # scaling
+	# if is_train:
+	# We flip with probability 1/2
+	if np.random.uniform() <= 0.5:
+		flip = 1
+	
+	# Each channel is multiplied with a number 
+	# in the area [1-opt.noiseFactor,1+opt.noiseFactor]
+	pn = np.random.uniform(1-noise_factor, 1+noise_factor, 3)
+	
+	# The rotation is a number in the area [-2*rotFactor, 2*rotFactor]
+	rot = min(2*rot_factor,
+			max(-2*rot_factor, np.random.randn()*rot_factor))
+	
+	# The scale is multiplied with a number
+	# in the area [1-scaleFactor,1+scaleFactor]
+	sc = min(1+scale_factor,
+			max(1-scale_factor, np.random.randn()*scale_factor+1))
+	# but it is zero with probability 3/5
+	if np.random.uniform() <= 0.6:
+		rot = 0
+	return flip, pn, rot, sc
+
+
+
 while True:
-	ret, img_bgr = vid.read()
-	# img_bgr = cv2.imread(path +  files[c])
-	# c+=1
-	img_bgr = cv2.imread("/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/all_images/frame_004921.jpg")
-	# img_bgr = cv2.imread("images/frame_003809.jpg")
+	# ret, img_bgr = vid.read()
+	# img_bgr = cv2.imread("images/frame_000344.jpg")
+	img_bgr = cv2.imread("images/frame_003809.jpg")
 	draw_img = img_bgr.copy()
 	# img_bgr = cv2.resize(img_bgr, (512, 512))
+
+	flip, pn, rot, sc = augm_params()
 	
 
 
@@ -217,11 +263,18 @@ while True:
 	# print("betas", pred_betas.shape)
 	# print("body pose", pred_rotmat[:, 1:].shape)
 	# print("global_orient", pred_rotmat[:, [0]].shape)
+	
+	poses =  torch.from_numpy(pose_processing(pred_rotmat[:, 1:], rot, flip)).float()
+	print(poses.shape)
+
 	pred_output = smpl_model(betas=pred_betas,
-								body_pose=pred_rotmat[:, 1:],
+								body_pose=poses,
 								global_orient=pred_rotmat[:, [0]],
 								pose2rot=False,
 								transl=pred_cam_full)
+
+
+	
 
 
 	
@@ -299,8 +352,8 @@ while True:
 	# cv2.waitKey(1)
 
 	renderer = Renderer(focal_length=focal_length, img_w=img_w, img_h=img_h,
-                            faces=smpl_model.faces,
-                            same_mesh_color=("video" == "video"))
+							faces=smpl_model.faces,
+							same_mesh_color=("video" == "video"))
 	
 	front_view = renderer.render_front_view(vertices.cpu(), img_bgr)
 

@@ -84,7 +84,7 @@ from pose_2D import detect_pose
 
 
 
-device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 # print("--------------------------- Detection ---------------------------")
@@ -97,7 +97,7 @@ print("--------------------------- 3D HPS estimation ---------------------------
 cliff = eval("cliff_" + "hr48")
 cliff_model = cliff(constants.SMPL_MEAN_PARAMS).to(device)
 # Load the pretrained model
-state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt", map_location="cuda:1")['model']
+state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt", map_location="cuda:0")['model']
 # state_dict = torch.load("checkpoint.pth")['state_dict']
 state_dict = strip_prefix_if_present(state_dict, prefix="module.")
 cliff_model.load_state_dict(state_dict, strict=True)

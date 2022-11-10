@@ -41,3 +41,4 @@ def detect_pose(image):
         results_mediapipe["scaled_keypoints"] = scaled_keypoints
         results_mediapipe["normalised_keypoints"] = normalised_keypoints
     return results_mediapipe
+

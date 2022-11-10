@@ -30,7 +30,7 @@ from utils import *
 import cv2
 
 from common.utils import *
-from render import *
+# from render import *
 import smplx
 from common import constants
 
@@ -112,7 +112,7 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 
 
 		projected_keypoints_2d = perspective_projection(pred_joints,
-				rotation=torch.eye(3, device="cuda:1").unsqueeze(0).expand(1, -1, -1),
+				rotation=torch.eye(3, device="cuda:0").unsqueeze(0).expand(1, -1, -1),
 				translation=pred_cam_full,
 				focal_length=focal_length,
 				camera_center=torch.div(full_img_shape.flip(dims=[1]), 2, rounding_mode='floor'))
@@ -213,7 +213,7 @@ def train_epoch(train_loader, model, criterion, optimizer, epoch, args):
 			wandb.log({"train_loss": losses.avg})
 			progress.display(i + 1)
 
-			train_img = cv2.imread("images/frame_000344.jpg")
+			train_img = cv2.imread("images/frame_003809.jpg")
 			visualise(train_img, model, output_path="val.jpg")
 			save_checkpoint({
 			'epoch': epoch + 1,

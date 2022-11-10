@@ -150,12 +150,12 @@ def main():
 		# Simply call main_worker function
 		main_worker(args.gpu, ngpus_per_node, args)
 
-device = torch.device("cuda:1")
+device = torch.device("cuda:0")
 
 # def main_worker(gpu, ngpus_per_node, args):
 def main_worker(args):
 	global best_acc1
-	args.gpu = "cuda:1"
+	args.gpu = "cuda:0"
 	th = 100000
 
 
@@ -311,7 +311,7 @@ def main_worker(args):
 
 	train_loader = torch.utils.data.DataLoader(
 		train_dataset, batch_size=args.batch_size, shuffle=True,
-		num_workers=0, pin_memory=True)
+		num_workers=4, pin_memory=True)
 
 	# val_loader = torch.utils.data.DataLoader(
 	# 	val_dataset, batch_size=args.batch_size, shuffle=False,
@@ -360,3 +360,4 @@ def main_worker(args):
 if __name__ == '__main__':
 	args = parser.parse_args()
 	main_worker(args)
+
