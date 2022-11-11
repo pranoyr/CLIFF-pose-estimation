@@ -12,8 +12,8 @@ import math
 from random import random
 import time
 from common.renderer_pyrd import Renderer
-from render import *
-from pytorch3d.structures import Meshes
+# from render import *
+# from pytorch3d.structures import Meshes
 import pickle
 import os.path as osp
 import cv2
@@ -93,11 +93,11 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 print("--------------------------- 3D HPS estimation ---------------------------")
 # Create the model instance
-cliff = eval("cliff_" + "res50")
+cliff = eval("cliff_" + "hr48")
 cliff_model = cliff(constants.SMPL_MEAN_PARAMS).to(device)
 # Load the pretrained model
-# state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
-state_dict = torch.load("checkpoint.pth", map_location="cuda:0")['state_dict']
+state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
+# state_dict = torch.load("checkpoint.pth", map_location="cuda:0")['state_dict']
 state_dict = strip_prefix_if_present(state_dict, prefix="module.")
 cliff_model.load_state_dict(state_dict, strict=True)
 cliff_model.eval()
@@ -114,15 +114,15 @@ vid = cv2.VideoCapture(0)
 # Setup the SMPL model
 smpl_model = smplx.create(constants.SMPL_MODEL_DIR, "smpl").to(device)
 
-path = "/home/pranoy/code/auto-transform/new_data/all_images/"
-files = os.listdir(path)
+# path = "/home/pranoy/code/auto-transform/new_data/all_images/"
+# files = os.listdir(path)
 
 c = 0
 while True:
 	ret, img_bgr = vid.read()
 	# img_bgr = cv2.imread(path +  files[c])
 	# c+=1
-	img_bgr = cv2.imread("/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/all_images/frame_004921.jpg")
+	#img_bgr = cv2.imread("/media/pranoy/Pranoy/mpi_inf_3dhp/S1/Seq1/imageFrames/all_images/frame_004921.jpg")
 	# img_bgr = cv2.imread("images/frame_003809.jpg")
 	draw_img = img_bgr.copy()
 	# img_bgr = cv2.resize(img_bgr, (512, 512))
