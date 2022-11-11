@@ -96,7 +96,9 @@ print("--------------------------- 3D HPS estimation ---------------------------
 cliff = eval("cliff_" + "hr48")
 cliff_model = cliff(constants.SMPL_MEAN_PARAMS).to(device)
 # Load the pretrained model
-state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
+#state_dict = torch.load("data/ckpt/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
+state_dict = torch.hub.load_state_dict_from_url("https://github.com/pranoyr/CLIFF-pose-estimation/releases/download/v1/hr48-PA43.0_MJE69.0_MVE81.2_3dpw.pt")['model']
+
 # state_dict = torch.load("checkpoint.pth", map_location="cuda:0")['state_dict']
 state_dict = strip_prefix_if_present(state_dict, prefix="module.")
 cliff_model.load_state_dict(state_dict, strict=True)
